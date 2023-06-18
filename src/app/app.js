@@ -29,7 +29,7 @@ const Root = () => (
       history={browserHistory}
       onUpdate={handleRouterUpdate}
     >
-      <Route path="/tools" component={Layout}>
+      <Route path="/" component={Layout}>
         <Route path="main" component={Main}/>
         <Route path="html" component={Html}/>
         {/* <Route path="js" component={Js}/> */}
