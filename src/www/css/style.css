@@ -134,6 +134,14 @@ a.copytext.active:after {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.columns {display:flex;}
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
 footer .wrap {max-width:1024px;margin:0 auto;}
 footer p {margin-bottom:0;}

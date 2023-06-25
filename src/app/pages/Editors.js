@@ -59,6 +59,7 @@ class Editors extends React.Component {
     let lead = selection.lead;
     // console.log('lead = ', lead);
     document.getElementById('inputAceLineColumn').textContent = `Ln: ${lead.row+1} Col: ${lead.column}`;
+    document.getElementById('inputTextSize').textContent = `Size: ${editor.getValue().length}`;
   }
   setupOutputEditor() {
     let self = this;
@@ -79,6 +80,7 @@ class Editors extends React.Component {
     let selection = editor.selection;
     let lead = selection.lead;
     document.getElementById('outputAceLineColumn').textContent = `Ln: ${lead.row+1} Col: ${lead.column}`;
+    document.getElementById('outputTextSize').textContent = `Size: ${editor.getValue().length}`;
   }
   setupEditorAndLoadData() {}
 
