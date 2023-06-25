@@ -13,7 +13,7 @@ class Json extends React.Component {
     this.editors = null;
 
     // Constants
-    this.JSON_VERIFIER_URL = '';
+    this.JSON_VERIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jsonlint/1.6.0/jsonlint.min.js';
   }
   
   setJsonSampleData = (event) => {
@@ -53,12 +53,18 @@ class Json extends React.Component {
   verifyJson = (event) => {
     let self = this;
     utils.loadScript(this.JSON_VERIFIER_URL, function() {
-      let opts = {
-      };
       let inputEditor = self.editors.getWrappedInstance().inputACEEditor;
-      let output = verifier.html(inputEditor.getValue(), opts);
       let outputEditor = self.editors.getWrappedInstance().outputACEEditor;
-      outputEditor.setValue(output);
+      let data = inputEditor.getValue();
+      if($.trim(data) != '') {
+        try {
+          if(jsonlint.parse(data)) {
+            outputEditor.setValue('Valid JSON');
+          }
+        } catch(e) {
+          outputEditor.setValue(e+'');
+        }
+      }
     });
   }
 
