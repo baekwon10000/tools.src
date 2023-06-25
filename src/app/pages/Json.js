@@ -67,7 +67,9 @@ class Json extends React.Component {
     return (
       <Editors
         ref={ref => this.editors = ref}
-        mode={'json'}
+        title={'JSON'}
+        inputEditorMode={'json'}
+        outputEditorMode={'plan_text'}
         setSampleData={this.setJsonSampleData}
         // beautify={this.beautifyJson}
         // minify={this.minifyJson}

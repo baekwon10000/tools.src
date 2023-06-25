@@ -64,9 +64,6 @@ class Html extends React.Component {
 
   minifyHtml = (event) => {
     let self = this;
-    // alert("개발예정입니다.");
-    // let minify = requirejs('html-minifier').minify;
-    // console.log('minify = ', minify);
     utils.loadScript(this.HTML_MINIFIER_URL, function() {
       console.log('script is loaded...');
       let minify = require('html-minifier').minify;
@@ -89,7 +86,9 @@ class Html extends React.Component {
     return (
       <Editors
         ref={ref => this.editors = ref}
-        mode={'html'}
+        title={'HTML'}
+        inputEditorMode={'html'}
+        outputEditorMode={'html'}
         setSampleData={this.setHtmlSampleData}
         beautify={this.beautifyHtml}
         minify={this.minifyHtml}

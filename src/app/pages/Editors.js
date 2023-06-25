@@ -8,7 +8,6 @@ class Editors extends React.Component {
     this.state = {}
 
     this.ace_common_options = {
-      mode: `ace/mode/${this.props.mode}`,
       showPrintMargin: false,
     };
     
@@ -42,6 +41,7 @@ class Editors extends React.Component {
     let editor = this.inputACEEditor = ace.edit('inputACEEditor',
       {
         ...this.ace_common_options,
+        mode: `ace/mode/${this.props.inputEditorMode}`,
         placeholder: `Paste or type your data here...`,
       }
     );
@@ -64,6 +64,7 @@ class Editors extends React.Component {
     let self = this;
     let editor = this.outputACEEditor = ace.edit('outputACEEditor', {
       ...this.ace_common_options,
+      mode: `ace/mode/${this.props.outputEditorMode}`,
     });
     let lang = ace.require("ace/lib/lang");
     let statusUpdate = lang.delayedCall(function() {
@@ -181,7 +182,7 @@ class Editors extends React.Component {
                     </svg>
                   </a>
                 </div>
-                <a href="#" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.mode.toUpperCase()} Data`} onClick={this.props.setSampleData}>
+                <a href="#" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.title.toUpperCase()} Data`} onClick={this.props.setSampleData}>
                   <i>Sample</i>
                 </a>
               </div>
