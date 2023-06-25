@@ -84,16 +84,23 @@ class Html extends React.Component {
 
   render() {
     return (
-      <Editors
-        ref={ref => this.editors = ref}
-        title={'HTML'}
-        inputEditorMode={'html'}
-        outputEditorMode={'html'}
-        setSampleData={this.setHtmlSampleData}
-        beautify={this.beautifyHtml}
-        minify={this.minifyHtml}
-        // verify={this.verifyHtml}
-      />
+      <div className="container-fluid py-3">
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <h1>{`HTML Minifier`}</h1>
+          </div>
+        </div>
+        <Editors
+          ref={ref => this.editors = ref}
+          title={'HTML'}
+          inputEditorMode={'html'}
+          outputEditorMode={'html'}
+          setSampleData={this.setHtmlSampleData}
+          beautify={this.beautifyHtml}
+          minify={this.minifyHtml}
+          // verify={this.verifyHtml}
+        />
+      </div>
     )
   }
 }

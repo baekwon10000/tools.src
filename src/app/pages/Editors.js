@@ -124,7 +124,7 @@ class Editors extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid py-3">
+      <div className="">
         <div className="mb-2">
           {
             this.props.beautify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.beautify}>

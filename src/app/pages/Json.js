@@ -65,16 +65,23 @@ class Json extends React.Component {
 
   render() {
     return (
-      <Editors
-        ref={ref => this.editors = ref}
-        title={'JSON'}
-        inputEditorMode={'json'}
-        outputEditorMode={'plan_text'}
-        setSampleData={this.setJsonSampleData}
-        // beautify={this.beautifyJson}
-        // minify={this.minifyJson}
-        verify={this.verifyJson}
-      />
+      <div className="container-fluid py-3">
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <h1>{`JSON Verifier`}</h1>
+          </div>
+        </div>
+        <Editors
+          ref={ref => this.editors = ref}
+          title={'JSON'}
+          inputEditorMode={'json'}
+          outputEditorMode={'plan_text'}
+          setSampleData={this.setJsonSampleData}
+          // beautify={this.beautifyJson}
+          // minify={this.minifyJson}
+          verify={this.verifyJson}
+        />
+      </div>
     )
   }
 }
