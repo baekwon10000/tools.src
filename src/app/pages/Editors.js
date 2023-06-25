@@ -9,6 +9,9 @@ class Editors extends React.Component {
 
     this.ace_common_options = {
       showPrintMargin: false,
+      // enableBasicAutocompletion: true,
+      // enableSnippets: true,
+      // enableLiveAutocompletion: true
     };
     
     // Instants or Variables
@@ -92,10 +95,12 @@ class Editors extends React.Component {
 
   // Input
   copyTextInputEditor = (event) => {
+
     this.inputACEEditor.selectAll();
     this.inputACEEditor.focus();
     document.execCommand("copy");
 
+    // 말풍선 효과
     let el = document.querySelector('#inputcopy');
     el.classList.add("active");
     setTimeout(function () {
