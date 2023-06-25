@@ -150,3 +150,15 @@ footer p {margin-bottom:0;}
 ._404 section {padding:48px 8px;text-align:center;}
 ._404 section h1 {font-size:2em;margin:0.67em 0px;}
 ._404 section p {}
+/* Options */
+.quiet { font-size: 0.85em; color: #888; }
+.short { display: inline-block; width: 20em; margin-top: 0.25em; }
+.unsafe { color: #f33; }
+
+#options ul {list-style:none;padding:0.5em;overflow:hidden;margin-top:0;}
+#options ul li {float:left;clear:both;padding-bottom:0.5em;}
+#options ul li div {margin-left:1.75em;}
+#options label, #options input {float:left;}
+#options label {line-height:18px;}
+#options label.sub-option {margin-left:22px;margin-right:5px}
+#options input {margin:3px 8px 3px 4px;}

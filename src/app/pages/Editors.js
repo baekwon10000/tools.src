@@ -124,6 +124,16 @@ class Editors extends React.Component {
     this.outputACEEditor.setValue("");
   }
 
+  options = (e) => {
+    // let self = this;
+    e.preventDefault();
+    if($("#options").is(":hidden")) {
+      $("#options").slideDown(0);
+    } else {
+      $("#options").slideUp(0);
+    }
+  }
+
   render() {
     return (
       <div className="">
@@ -142,6 +152,11 @@ class Editors extends React.Component {
             { 
               this.props.verify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.verify}>
                 <span>Verify</span>
+              </button> : null
+            }
+            { 
+              this.props.options ? <button className="btn btn-outline-secondary mr-1" onClick={this.options}>
+                <span>Options</span>
               </button> : null
             }
             <button className="btn btn-outline-secondary" onClick={this.cleanAllEditor}>
@@ -164,6 +179,7 @@ class Editors extends React.Component {
             </div> */}
           </div>
         </div>
+        { this.props.options ? this.props.options() : null }
         <div className="row">
           <div className="col-md-6 mb-4">
             <div id="inputDiv" className="aceEditorBorder">
