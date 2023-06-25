@@ -127,40 +127,42 @@ class Editors extends React.Component {
   render() {
     return (
       <div className="">
-        <div className="mb-2">
-          {
-            this.props.beautify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.beautify}>
-              <span>Beautify</span>
-            </button> : null
-          }
-          {
-            this.props.minify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.minify}>
-              <span>Minify</span>
-            </button> : null
-          }
-          { 
-            this.props.verify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.verify}>
-              <span>Verify</span>
-            </button> : null
-          }
-          <button className="btn btn-outline-secondary" onClick={this.cleanAllEditor}>
-            <span>Clear</span>
-          </button>
-          {/* <div className="select">
-            <select id="indent" onChange={this.beautifyHTML} defaultValue={2}>
-              <option value="t">Use Tab</option>
-              <option value="1">1 Space</option>
-              <option value="2">2 Space</option>
-              <option value="3">3 Space</option>
-              <option value="4">4 Space</option>
-              <option value="5">5 Space</option>
-              <option value="6">6 Space</option>
-              <option value="7">7 Space</option>
-              <option value="8">8 Space</option>
-              <option value="9">9 Space</option>
-              <option value="10">10 Space</option>
-            </select>
-          </div> */}
+        <div className="row mb-3">
+          <div className="col-md-12">
+            {
+              this.props.beautify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.beautify}>
+                <span>Beautify</span>
+              </button> : null
+            }
+            {
+              this.props.minify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.minify}>
+                <span>Minify</span>
+              </button> : null
+            }
+            { 
+              this.props.verify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.verify}>
+                <span>Verify</span>
+              </button> : null
+            }
+            <button className="btn btn-outline-secondary" onClick={this.cleanAllEditor}>
+              <span>Clear</span>
+            </button>
+            {/* <div className="select">
+              <select id="indent" onChange={this.beautifyHTML} defaultValue={2}>
+                <option value="t">Use Tab</option>
+                <option value="1">1 Space</option>
+                <option value="2">2 Space</option>
+                <option value="3">3 Space</option>
+                <option value="4">4 Space</option>
+                <option value="5">5 Space</option>
+                <option value="6">6 Space</option>
+                <option value="7">7 Space</option>
+                <option value="8">8 Space</option>
+                <option value="9">9 Space</option>
+                <option value="10">10 Space</option>
+              </select>
+            </div> */}
+          </div>
         </div>
         <div className="row">
           <div className="col-md-6 mb-4">
