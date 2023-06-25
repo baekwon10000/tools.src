@@ -18,9 +18,25 @@ li {list-style:none;}
 label {margin-bottom:0;}
 
 .hidden {display:none;}
+.btn-outline-secondary:focus {box-shadow:none;}
+
+/* Start */
+header .navbar-brand {padding:0;height:32px;}
+header .navbar-brand span {font-size:32px;}
+header ul.contacts {position:absolute;right:16px;top:8px;line-height:40px;}
+header ul.contacts li {float:left;}
+header ul.contacts li {line-height:40px;text-align:center;width:40px;height:40px;margin:0 2px;border-radius:50%;border:1px solid #d9d9d9;}
+header ul.contacts li a svg {display:inline-block;width:16px;height:16px;margin:0 3px 3px;}
+header ul.contacts li a svg {fill:#222;}
+header ul.contacts li a:hover svg {fill:#5d93ff;}
+header ul.contacts li span {margin-top:8px;}
+header ul.contacts li a:hover span {color:#5d93ff;}
+
+@media(max-width:768px) {
+  header ul.contacts {display:none;}
+}
 
 .main-wrap {margin-top:56px;}
-.btn-outline-secondary:focus {box-shadow:none;}
 
 .icon {
   align-items: center;

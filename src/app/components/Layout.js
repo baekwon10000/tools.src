@@ -39,8 +39,10 @@ export class MainLayout extends React.Component {
 
           <header>
             <nav className="navbar navbar-expand-md navbar-light bg-light rounded fixed-top">
-              <a className="navbar-brand" href="/">
-                Tools
+              <a className="navbar-brand" href="/" title="Tools">
+                <span className="material-symbols-outlined">
+                  construction
+                </span>
               </a>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -78,6 +80,25 @@ export class MainLayout extends React.Component {
                       <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
+                  </li>
+                </ul>
+                <ul className="contacts">
+                  <li>
+                    <a className="" href="#" title="Buy a coffee">
+                      <span className="material-symbols-outlined">
+                        local_cafe
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:zamong99@gmail.com" target="_blank">
+                      <Icon name="Email" icon={ICONS['EMAIL']}/>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/redpeanut/tools" target="_blank">
+                      <Icon name="Github" icon={ICONS['GITHUB']}/>
+                    </a>
                   </li>
                 </ul>
               </div>
