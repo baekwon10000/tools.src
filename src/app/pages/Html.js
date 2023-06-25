@@ -333,16 +333,31 @@ class Html extends React.Component {
   )
 
   render() {
+
+    let map = {
+      'beautify':'beatuifier',
+      'minify':'minifier',
+      'verify':'verifier',
+    }
+
+    let pathname = this.props.location.pathname;
+    pathname = pathname.startsWith('/') ? pathname.substring(1) : pathname;
+    let split = pathname.split('/');
+    let first = split.length > 0 ? split[0] : null, type = first;
+    let second = split.length > 1 ? split[1] : 'beautify', action = second;
+    // let third = split.length > 2 ? split[2] : null;
+    let title = type.toUpperCase() + ' ' + map[action].substring(0,1).toUpperCase()+map[action].substring(1);
+
     return (
       <div className="container-fluid py-3">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h1>{`HTML Minifier`}</h1>
+            <h1>{title}</h1>
           </div>
         </div>
         <Editors
           ref={ref => this.editors = ref}
-          title={'HTML'}
+          title={type.toUpperCase()}
           inputEditorMode={'html'}
           outputEditorMode={'html'}
           setSampleData={this.setHtmlSampleData}

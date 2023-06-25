@@ -31,9 +31,9 @@ const Root = () => (
     >
       <Route path="/" component={Layout}>
         <Route path="main" component={Main}/>
-        {['html/beautify', 'html/minify'].map((path,index)=><Route path={path} component={Html} key={index}/>)}
+        {['html','html/beautify','html/minify'].map((path,index)=><Route path={path} component={Html} key={index}/>)}
+        {['json','json/verify'].map((path,index)=><Route path={path} component={Json} key={index}/>)}
         {/* <Route path="js" component={Js}/> */}
-        {['json/beautify', 'json/minify', 'json/verify'].map((path,index)=><Route path={path} component={Json} key={index}/>)}
       </Route>
       <Route path="*" component={NotFoundPage}/>
     </Router>
