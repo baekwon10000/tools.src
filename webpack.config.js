@@ -123,7 +123,7 @@ const common = merge([
       contentBase: 'src/www',
       // publicPath: '/tools',
       hot: true,
-      // stats: 'errors-only',
+      stats: 'errors-only',
       host: '0.0.0.0',
       port: '4000'
     },
