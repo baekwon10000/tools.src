@@ -17,8 +17,7 @@ class Json extends React.Component {
   }
   
   setJsonSampleData = (event) => {
-    let sampleData = `
-{
+    let sampleData = `{
   "employees": {
       "employee": [
           {
@@ -75,7 +74,7 @@ class Json extends React.Component {
           ref={ref => this.editors = ref}
           title={'JSON'}
           inputEditorMode={'json'}
-          outputEditorMode={'plan_text'}
+          outputEditorMode={'plain_text'}
           setSampleData={this.setJsonSampleData}
           // beautify={this.beautifyJson}
           // minify={this.minifyJson}
