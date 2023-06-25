@@ -54,7 +54,6 @@ class Json extends React.Component {
   verifyJson = (event) => {
     let self = this;
     utils.loadScript(this.JSON_VERIFIER_URL, function() {
-      console.log('script is loaded...');
       let opts = {
       };
       let inputEditor = self.editors.getWrappedInstance().inputACEEditor;

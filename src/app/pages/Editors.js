@@ -43,35 +43,20 @@ class Editors extends React.Component {
       {
         ...this.ace_common_options,
         placeholder: `Paste or type your data here...`,
-        // enableBasicAutocompletion: true,
-        // enableSnippets: true,
-        // enableLiveAutocompletion: true
       }
     );
-    // editor.setTheme('ace/theme/monokai');
-    // editor.setShowPrintMargin(false);
-    // editor.session.setMode('ace/mode/html');
-    /* editor.session.on('change', function(delta) {
-      // delta.start, delta.end, delta.lines, delta.action
-      console.log('delta = ', delta);
-      self.updateInputAceEditorStatusBar();
-    }); */
     let lang = ace.require("ace/lib/lang");
     let statusUpdate = lang.delayedCall(function() {
       self.updateInputAceEditorStatusBar(editor);
     }.bind(this)).schedule.bind(null, 100);
-    // console.log('lang = ', lang);
     editor.on('changeStatus', statusUpdate);
     editor.on("changeSelection", statusUpdate);
     editor.on("keyboardActivity", statusUpdate);
   }
   postSetupInputEditor() {}
   updateInputAceEditorStatusBar(editor) {
-    // console.log('updateInputAceEditorStatusBar() is called...');
-    // console.log('editor.keyBinding.getStatusText(editor) = ', editor.keyBinding.getStatusText(editor));
     let selection = editor.selection;
     let lead = selection.lead;
-    // console.log('selection = ', selection);
     // console.log('lead = ', lead);
     document.getElementById('inputAceLineColumn').textContent = `Ln: ${lead.row+1} Col: ${lead.column}`;
   }
@@ -80,18 +65,10 @@ class Editors extends React.Component {
     let editor = this.outputACEEditor = ace.edit('outputACEEditor', {
       ...this.ace_common_options,
     });
-    // editor.setTheme('ace/theme/monokai');
-    // editor.setShowPrintMargin(false);
-    // editor.session.setMode('ace/mode/html');
-    // editor.session.on('change', function(delta) {
-    //   // delta.start, delta.end, delta.lines, delta.action
-    //   self.updateOutputAceEditorStatusBar();
-    // });
     let lang = ace.require("ace/lib/lang");
     let statusUpdate = lang.delayedCall(function() {
       self.updateOutputAceEditorStatusBar(editor);
     }.bind(this)).schedule.bind(null, 100);
-    // console.log('lang = ', lang);
     editor.on('changeStatus', statusUpdate);
     editor.on("changeSelection", statusUpdate);
     editor.on("keyboardActivity", statusUpdate);
@@ -100,7 +77,6 @@ class Editors extends React.Component {
   updateOutputAceEditorStatusBar(editor) {
     let selection = editor.selection;
     let lead = selection.lead;
-    // let status = [];
     document.getElementById('outputAceLineColumn').textContent = `Ln: ${lead.row+1} Col: ${lead.column}`;
   }
   setupEditorAndLoadData() {}
@@ -116,15 +92,6 @@ class Editors extends React.Component {
     this.inputACEEditor.selectAll();
     this.inputACEEditor.focus();
     document.execCommand("copy");
-    /* let currentText = this.inputACEEditor.getValue();
-    let copyArea = $('<textarea />')
-      .text(currentText)
-      .attr('readonly', '')
-      .css({ 'position': 'absolute', 'left': '-9999px' });
-    $('body').append(copyArea);
-    copyArea.select();
-    document.execCommand('copy');
-    copyArea.remove(); */
 
     let el = document.querySelector('#inputcopy');
     el.classList.add("active");
