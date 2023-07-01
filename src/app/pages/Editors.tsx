@@ -2,7 +2,21 @@ import React from "react"
 import {connect} from "react-redux";
 import {Props} from "../types";
 
-class Editors extends React.Component<Props,{}> {
+interface EditorsProps extends Props {
+
+  type: string;
+  inputEditorMode: string;
+  outputEditorMode: string;
+  setSampleData: Function;
+  
+  //
+  beautify: MouseEventHandler<HTMLButtonElement>;
+  minify: MouseEventHandler<HTMLButtonElement>;
+  verify: MouseEventHandler<HTMLButtonElement>;
+  options: Function;
+}
+
+class Editors extends React.Component<EditorsProps,{}> {
 
   ace_common_options = {
     showPrintMargin: false,
@@ -208,7 +222,7 @@ class Editors extends React.Component<Props,{}> {
                     </svg>
                   </a>
                 </div>
-                <a href="#" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.title.toUpperCase()} Data`} onClick={this.props.setSampleData}>
+                <a href="#" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.type.toUpperCase()} Data`} onClick={this.props.setSampleData}>
                   <i>Sample</i>
                 </a>
               </div>

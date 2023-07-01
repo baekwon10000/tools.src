@@ -11,6 +11,7 @@ import Main from "./pages/Main"
 import Html from "./pages/Html"
 import Js from "./pages/Js"
 import Json from "./pages/Json"
+import Wrapper from "./pages/Wrapper"
 
 const globals = require("./config/" + process.env.NODE_ENV + "/globals");
 const store = configureStore();
@@ -30,10 +31,17 @@ const Root = () => (
       onUpdate={handleRouterUpdate}
     >
       <Route path="/" component={MainLayout}>
-        <Route path="main" component={Main}/>
+        {
+          [
+            'main',
+            'html','html/beautify','html/minify',
+            'json','json/verify'
+          ].map((path,index)=><Route path={path} component={Wrapper} key={index}/>)
+        }
+        {/* <Route path="main" component={Main}/>
         {['html','html/beautify','html/minify'].map((path,index)=><Route path={path} component={Html} key={index}/>)}
         {['json','json/verify'].map((path,index)=><Route path={path} component={Json} key={index}/>)}
-        {/* <Route path="js" component={Js}/> */}
+        <Route path="js" component={Js}/> */}
       </Route>
       <Route path="*" component={NotFoundPage}/>
     </Router>

@@ -7,9 +7,9 @@ import utils from "../utils/utils";
 // var requirejs = require('requirejs');
 // import $ from "jquery";
 // window.jQuery = $;
-import {Props} from "../types";
+import {Props, ComponentProps} from "../types";
 
-class Html extends React.Component<Props,{}> {
+class Html extends React.Component<ComponentProps,{}> {
 
   // Refs
   editors: any = null;
@@ -335,39 +335,35 @@ class Html extends React.Component<Props,{}> {
 
   render() {
 
-    let map = {
-      'beautify':'beatuifier',
-      'minify':'minifier',
-      'verify':'verifier',
+    const {type, action} = this.props;
+    let inputEditorMode, outputEditorMode, beautify, minify, options;
+
+    if(action === 'minify') {
+      inputEditorMode = 'html';
+      outputEditorMode = 'html';
+      beautify = null;
+      minify = this.minifyHtml;
+      options = this.options;
+    } else { //if(action === 'beautify') {
+      inputEditorMode = 'html';
+      outputEditorMode = 'html';
+      beautify = this.beautifyHtml;
+      minify = null;
+      options = null;
     }
 
-    let pathname = this.props.location.pathname;
-    pathname = pathname.startsWith('/') ? pathname.substring(1) : pathname;
-    let split = pathname.split('/');
-    let first = split.length > 0 ? split[0] : null, type = first;
-    let second = split.length > 1 ? split[1] : 'beautify', action = second;
-    // let third = split.length > 2 ? split[2] : null;
-    let title = type.toUpperCase() + ' ' + map[action].substring(0,1).toUpperCase()+map[action].substring(1);
-
     return (
-      <div className="container-fluid py-3">
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <h1>{title}</h1>
-          </div>
-        </div>
-        <Editors
-          ref={ref => this.editors = ref}
-          title={type.toUpperCase()}
-          inputEditorMode={'html'}
-          outputEditorMode={'html'}
-          setSampleData={this.setHtmlSampleData}
-          // beautify={this.beautifyHtml}
-          minify={this.minifyHtml}
-          // verify={this.verifyHtml}
-          options={this.options}
-        />
-      </div>
+      <Editors
+        ref={ref => this.editors = ref}
+        type={type}
+        inputEditorMode={inputEditorMode}
+        outputEditorMode={outputEditorMode}
+        setSampleData={this.setHtmlSampleData}
+        beautify={beautify}
+        minify={minify}
+        // verify={this.verifyHtml}
+        options={options}
+      />
     )
   }
 }

@@ -7,3 +7,7 @@ export interface Props {
   location?: LocationDescriptor;
 }
 
+export interface ComponentProps extends Props {
+  type: string;
+  action: string;
+}

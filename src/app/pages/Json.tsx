@@ -2,9 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Editors from './Editors'
 import utils from "../utils/utils";
-import {Props} from "../types";
+import {Props, ComponentProps} from "../types";
 
-class Json extends React.Component<Props,{}> {
+class Json extends React.Component<ComponentProps,{}> {
 
   // Refs
   editors = null;
@@ -71,38 +71,29 @@ class Json extends React.Component<Props,{}> {
 
   render() {
 
-    let map = {
-      'beautify':'beatuifier',
-      'minify':'minifier',
-      'verify':'verifier',
+    const {type, action} = this.props;
+    let inputEditorMode, outputEditorMode, beautify, minify, verify, options;
+
+    { //if(action === 'verify') {
+      inputEditorMode = 'json';
+      outputEditorMode = 'plain_text';
+      beautify = null;
+      minify = null;
+      verify = this.verifyJson;
+      options = null;
     }
 
-    let pathname = this.props.location.pathname;
-    pathname = pathname.startsWith('/') ? pathname.substring(1) : pathname;
-    let split = pathname.split('/');
-    let first = split.length > 0 ? split[0] : null, type = first;
-    let second = split.length > 1 ? split[1] : 'verify', action = second;
-    // let third = split.length > 2 ? split[2] : null;
-    let title = type.toUpperCase() + ' ' + map[action].substring(0,1).toUpperCase()+map[action].substring(1);
-
     return (
-      <div className="container-fluid py-3">
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <h1>{title}</h1>
-          </div>
-        </div>
-        <Editors
-          ref={ref => this.editors = ref}
-          title={type}
-          inputEditorMode={'json'}
-          outputEditorMode={'plain_text'}
-          setSampleData={this.setJsonSampleData}
-          // beautify={this.beautifyJson}
-          // minify={this.minifyJson}
-          verify={this.verifyJson}
-        />
-      </div>
+      <Editors
+        ref={ref => this.editors = ref}
+        type={type}
+        inputEditorMode={inputEditorMode}
+        outputEditorMode={outputEditorMode}
+        setSampleData={this.setJsonSampleData}
+        // beautify={beautify}
+        // minify={minifyn}
+        verify={verify}
+      />
     )
   }
 }
