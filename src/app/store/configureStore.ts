@@ -5,7 +5,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux'
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from '../sagas/rootSaga';
 
-export default function configureStore(preloadedState) {
+export default function configureStore(preloadedState = {}) {
 
   const reducer = combineReducers({
     ...reducers,

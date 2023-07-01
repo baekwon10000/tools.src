@@ -9,7 +9,7 @@ const WebpackShellPlugin = require('webpack-shell-plugin');
 const common = merge([
   {
     entry: {
-      app: ['babel-polyfill', path.resolve(__dirname, 'src/app/app.js')]
+      app: ['babel-polyfill', path.resolve(__dirname, 'src/app/app.tsx')]
     },
     output: {
       publicPath: '/',
