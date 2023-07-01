@@ -4,21 +4,21 @@ import {Props} from "../types";
 
 class Editors extends React.Component<Props,{}> {
 
+  ace_common_options = {
+    showPrintMargin: false,
+    // enableBasicAutocompletion: true,
+    // enableSnippets: true,
+    // enableLiveAutocompletion: true
+  };
+  
+  // Instants or Variables
+  inputACEEditor = null;
+  outputACEEditor = null;
+  // .scriptsLoaded = [];
+
   constructor(props) {
     super(props);
     this.state = {}
-
-    this.ace_common_options = {
-      showPrintMargin: false,
-      // enableBasicAutocompletion: true,
-      // enableSnippets: true,
-      // enableLiveAutocompletion: true
-    };
-    
-    // Instants or Variables
-    this.inputACEEditor = null;
-    this.outputACEEditor = null;
-    // this.scriptsLoaded = [];
   }
 
   componentDidMount() {

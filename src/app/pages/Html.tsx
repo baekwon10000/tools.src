@@ -11,19 +11,19 @@ import {Props} from "../types";
 
 class Html extends React.Component<Props,{}> {
 
+  // Refs
+  editors: any = null;
+
+  // Constants
+  HTML_BEAUTIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautifier.js';
+  HTML_MINIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/html-minifier/0.8.1/htmlminifier.min.js';
+
+  // Instants or Variables
+  scriptsLoaded = [];
+
   constructor(props) {
     super(props);
     this.state = {}
-
-    // Refs
-    this.editors = null;
-
-    // Constants
-    this.HTML_BEAUTIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautifier.js';
-    this.HTML_MINIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/html-minifier/0.8.1/htmlminifier.min.js';
-
-    // // Instants or Variables
-    // this.scriptsLoaded = [];
   }
   
   setHtmlSampleData = (event) => {

@@ -6,15 +6,15 @@ import {Props} from "../types";
 
 class Json extends React.Component<Props,{}> {
 
+  // Refs
+  editors = null;
+
+  // Constants
+  JSON_VERIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jsonlint/1.6.0/jsonlint.min.js';
+
   constructor(props) {
     super(props);
     this.state = {}
-
-    // Refs
-    this.editors = null;
-
-    // Constants
-    this.JSON_VERIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jsonlint/1.6.0/jsonlint.min.js';
   }
   
   setJsonSampleData = (event) => {
