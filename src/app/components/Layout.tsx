@@ -56,7 +56,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="/html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beautifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown01">
-                      <a className="dropdown-item" href="/html">HTML</a>
+                      <a className="dropdown-item" href="/html/beautify">HTML</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
@@ -64,7 +64,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="/html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown02">
-                      <a className="dropdown-item" href="/html">HTML</a>
+                      <a className="dropdown-item" href="/html/minify">HTML</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
@@ -72,7 +72,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="/json" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown03">
-                      <a className="dropdown-item" href="/json">JSON</a>
+                      <a className="dropdown-item" href="/json/verify">JSON</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
@@ -143,7 +143,7 @@ export class MainLayout extends React.Component<Props, {}> {
                 </ul>
               </div>
               <div className="col-6 col-md">
-                <h5>카테고리명이들어갑니다</h5>
+                <h5>메뉴명이들어갑니다</h5>
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
