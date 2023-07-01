@@ -36,7 +36,7 @@ header ul.contacts li a:hover span {color:#5d93ff;}
   header ul.contacts {display:none;}
 }
 
-.main-wrap {margin-top:56px;}
+.container-total {margin-top:56px;}
 
 .icon {
   align-items: center;

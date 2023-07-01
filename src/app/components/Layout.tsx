@@ -109,7 +109,7 @@ export class MainLayout extends React.Component<Props, {}> {
             </nav>
           </header>
 
-          <div className="main-wrap">
+          <div className="container-total">
             { this.props.children ? this.props.children : <Main/> }
           </div>
           
