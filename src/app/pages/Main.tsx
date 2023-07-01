@@ -1,6 +1,7 @@
-import React from "react"
+import React, {} from "react"
+import {Props} from "../types"
 
-class Main extends React.Component {
+class Main extends React.Component<Props, {}> {
 
   constructor(props) {
     super(props);

@@ -1,7 +1,8 @@
 import React from "react"
 import {connect} from "react-redux";
+import {Props} from "../types";
 
-class Editors extends React.Component {
+class Editors extends React.Component<Props,{}> {
 
   constructor(props) {
     super(props);

@@ -7,8 +7,9 @@ import utils from "../utils/utils";
 // var requirejs = require('requirejs');
 // import $ from "jquery";
 // window.jQuery = $;
+import {Props} from "../types";
 
-class Html extends React.Component {
+class Html extends React.Component<Props,{}> {
 
   constructor(props) {
     super(props);

@@ -2,8 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Editors from './Editors'
 import utils from "../utils/utils";
+import {Props} from "../types";
 
-class Json extends React.Component {
+class Json extends React.Component<Props,{}> {
 
   constructor(props) {
     super(props);

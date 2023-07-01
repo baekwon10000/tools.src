@@ -4,8 +4,11 @@ import "../../www/css/style.css"
 import Icon from "./Icon"
 import ICONS from "../utils/icons"
 import Main from "../pages/Main"
+import { Props } from "../types"
 
-export class Layout extends React.Component {
+// interface LayoutProps extends Props {}
+
+export class Layout extends React.Component<Props, {}> {
   render() {
     return (
       <div className={this.props.className}>
@@ -15,7 +18,7 @@ export class Layout extends React.Component {
   }
 }
 
-export class PlainLayout extends React.Component {
+export class PlainLayout extends React.Component<Props, {}> {
   render() {
     return (
       <Layout className="plain layout">
@@ -25,7 +28,8 @@ export class PlainLayout extends React.Component {
   }
 }
 
-export class MainLayout extends React.Component {
+// interface MainLayoutProps extends React.Props<> {}
+export class MainLayout extends React.Component<Props, {}> {
   
   render() {
 
