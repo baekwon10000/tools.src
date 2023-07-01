@@ -5,7 +5,7 @@ import {Provider} from "react-redux";
 import configureStore from "./store/configureStore";
 import {createHashHistory} from "history";
 
-import Layout from "./components/Layout"
+import MainLayout from "./components/Layout"
 import NotFoundPage from "./pages/404"
 import Main from "./pages/Main"
 import Html from "./pages/Html"
@@ -29,7 +29,7 @@ const Root = () => (
       history={browserHistory}
       onUpdate={handleRouterUpdate}
     >
-      <Route path="/" component={Layout}>
+      <Route path="/" component={MainLayout}>
         <Route path="main" component={Main}/>
         {['html','html/beautify','html/minify'].map((path,index)=><Route path={path} component={Html} key={index}/>)}
         {['json','json/verify'].map((path,index)=><Route path={path} component={Json} key={index}/>)}
