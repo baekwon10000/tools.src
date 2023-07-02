@@ -2,6 +2,8 @@ import React from "react"
 import {connect} from "react-redux";
 import {Props} from "../types";
 
+let ace, $;
+
 interface EditorsProps extends Props {
 
   type: string;
@@ -292,7 +294,7 @@ class Editors extends React.Component<EditorsProps,{}> {
   }
 }
 
-Editors.propTypes = {};
-Editors.defaultProps = {};
+// Editors.propTypes = {};
+// Editors.defaultProps = {};
 
 export default connect(null, null, null, {withRef:true})(Editors);

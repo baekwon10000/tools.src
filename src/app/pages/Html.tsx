@@ -9,6 +9,8 @@ import utils from "../utils/utils";
 // window.jQuery = $;
 import {Props, ComponentProps} from "../types";
 
+let beautifier, minify;
+
 class Html extends React.Component<ComponentProps,{}> {
 
   // Refs
@@ -368,7 +370,7 @@ class Html extends React.Component<ComponentProps,{}> {
   }
 }
 
-Html.propTypes = {};
-Html.defaultProps = {};
+// Html.propTypes = {};
+// Html.defaultProps = {};
 
 export default connect()(Html);

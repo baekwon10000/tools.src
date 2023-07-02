@@ -4,6 +4,8 @@ import Editors from './Editors'
 import utils from "../utils/utils";
 import {Props, ComponentProps} from "../types";
 
+let jsonlint, $;
+
 class Json extends React.Component<ComponentProps,{}> {
 
   // Refs
@@ -98,7 +100,7 @@ class Json extends React.Component<ComponentProps,{}> {
   }
 }
 
-Json.propTypes = {};
-Json.defaultProps = {};
+// Json.propTypes = {};
+// Json.defaultProps = {};
 
 export default connect()(Json);
