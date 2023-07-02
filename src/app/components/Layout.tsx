@@ -78,10 +78,18 @@ export class MainLayout extends React.Component<Props, {}> {
                     </div>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">메뉴명</a>
+                    <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Converter</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
+                      <a className="dropdown-item" href="#">JSON to XML</a>
+                      <a className="dropdown-item" href="#">XML to JSON</a>
                       <a className="dropdown-item" href="#">툴이름</a>
-                      <a className="dropdown-item" href="#">툴이름</a>
+                    </div>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Encoder/Decoder</a>
+                    <div className="dropdown-menu" aria-labelledby="dropdown04">
+                      <a className="dropdown-item" href="#">UNICODE</a>
+                      <a className="dropdown-item" href="#">URL</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
                   </li>
@@ -137,6 +145,15 @@ export class MainLayout extends React.Component<Props, {}> {
                 <h5>Verifier</h5>
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="/json">JSON</a></li>
+                  <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
+                  <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
+                  <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
+                </ul>
+              </div>
+              <div className="col-6 col-md">
+                <h5>메뉴명이들어갑니다</h5>
+                <ul className="list-unstyled text-small">
+                  <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
