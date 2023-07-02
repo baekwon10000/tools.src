@@ -65,8 +65,8 @@ class Html extends React.Component<ComponentProps,{}> {
     });
   }
 
-  byId(id) {
-    return document.getElementById(id);
+  byId = (id: string): HTMLInputElement => {
+    return document.getElementById(id); // as HTMLInputElement | null;
   }
 
   getOptions = () => {
