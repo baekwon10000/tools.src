@@ -16,6 +16,7 @@ interface EditorsProps extends Props {
   minify: MouseEventHandler<HTMLButtonElement>;
   verify: MouseEventHandler<HTMLButtonElement>;
   options: Function;
+
 }
 
 class Editors extends React.Component<EditorsProps,{}> {

@@ -2,9 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Editors from './Editors'
 import utils from "../utils/utils";
-// import {minify} from 'html-minifier';
-// import requirejs from 'requirejs';
-// var requirejs = require('requirejs');
 // import $ from "jquery";
 // window.jQuery = $;
 import {Props, ComponentProps} from "../types";
