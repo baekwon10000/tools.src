@@ -100,7 +100,7 @@ export class MainLayout extends React.Component<Props, {}> {
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/redpeanut/tools" target="_blank">
+                    <a href="https://github.com/baekwon10000/tools.src" target="_blank">
                       <Icon name="Github" icon={ICONS['GITHUB']}/>
                     </a>
                   </li>
