@@ -25,8 +25,8 @@ function plugins() {
     plugins.push(
       new WebpackShellPlugin({
         onBuildEnd: [
-          'node scripts/copy-index-to-404.ts',
-          'node scripts/copy-assets.ts',
+          'ts-node scripts/copy-index-to-404.ts',
+          'ts-node scripts/copy-assets.ts',
         ]
       })
     );
