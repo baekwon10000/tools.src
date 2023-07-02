@@ -6,6 +6,34 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 const WebpackShellPlugin = require('webpack-shell-plugin');
 
+function plugins() {
+  let plugins = [
+    new ExtractTextPlugin("[name].[chunkhash].css"),
+      new HtmlWebpackPlugin({
+        template: 'index.template.ejs',
+        inject: 'body',
+      }),
+      new webpack.DefinePlugin({
+        'process.env': {
+          'debug': false,
+          'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        }
+      }),
+  ];
+
+  if(process.env.NODE_ENV === 'production') {
+    plugins.push(
+      new WebpackShellPlugin({
+        onBuildEnd: [
+          'node scripts/copy-index-to-404.ts',
+          'node scripts/copy-assets.ts',
+        ]
+      })
+    );
+  }
+  return plugins;
+}
+
 const common = merge([
   {
     entry: {
@@ -17,26 +45,7 @@ const common = merge([
       filename: '[name].js',
       chunkFilename: '[name].js',
     },
-    plugins: [
-      new ExtractTextPlugin("[name].[chunkhash].css"),
-      new HtmlWebpackPlugin({
-        template: 'index.template.ejs',
-        inject: 'body',
-      }),
-      new webpack.DefinePlugin({
-        'process.env': {
-          'debug': false,
-          'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        }
-      }),
-      new WebpackShellPlugin({
-        onBuildEnd: 
-          process.env.NODE_ENV === 'production' ? [
-            'node scripts/copy-index-to-404.js',
-            'node scripts/copy-assets.js',
-          ] : [ 'node scripts/copy-index-to-404.js' ]
-      })
-    ],
+    plugins: plugins(),
     node: {
       fs: 'empty',
       net: 'empty',
