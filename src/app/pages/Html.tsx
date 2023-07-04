@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Editors from './Editors'
+import Editors from './Editor'
 import utils from "../utils/utils";
 // import $ from "jquery";
 // window.jQuery = $;
