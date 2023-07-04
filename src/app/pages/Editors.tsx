@@ -2,7 +2,7 @@ import React from "react"
 import {connect} from "react-redux";
 import {Props} from "../types";
 
-let ace, $;
+// let ace, $;
 
 interface EditorsProps extends Props {
 
