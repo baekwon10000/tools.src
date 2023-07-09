@@ -21,7 +21,8 @@ class Main extends React.Component<Props, {}> {
         <div className="row">
           <div className="col-md-12 text-center">
             <p>
-              간략한 설명이 들어갑니다.
+              Holy shit, ad sites!
+              It's dirty and cheesy, so I'd rather make it and use it.
             </p>
           </div>
         </div>
