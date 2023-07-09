@@ -1,1 +1,3 @@
-export sample from './sample';
+import sample from './sample';
+
+export default {sample}

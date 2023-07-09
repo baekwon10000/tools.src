@@ -14,7 +14,7 @@ export const initialState = {
 }
 
 /* reducers */
-export const sample = (state = {}, action) => {
+export default (state = initialState, action) => {
   switch(action.type) {
     case SET_SOME_VAL:
       return Object.assign({}, state, {
