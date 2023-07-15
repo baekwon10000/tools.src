@@ -2,7 +2,10 @@
   "name": "tools",
   "version": "0.0.1",
   "description": "",
-  "homepage": "https://redpeanut.github.io/tools",
+  "homepage": "https://redpeanut.github.io/",
+  "keywords": [],
+  "author": "redpeanut",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn run start:dev",
@@ -13,9 +16,6 @@
     "build:prod": "rm -rf prod && NODE_ENV=production webpack --env prod --progress --color",
     "publish": "yarn run build:prod && ts-node scripts/publish.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "@types/gh-pages": "3.2.1",
     "@types/node": "12",
