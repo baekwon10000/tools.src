@@ -10,7 +10,7 @@ function plugins() {
   let plugins = [
     new ExtractTextPlugin("[name].[chunkhash].css"),
       new HtmlWebpackPlugin({
-        template: 'index.template.ejs',
+        template: 'index.html',
         inject: 'body',
       }),
       new webpack.DefinePlugin({
