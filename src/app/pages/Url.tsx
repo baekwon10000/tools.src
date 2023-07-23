@@ -15,8 +15,12 @@ class Url extends React.Component<ComponentProps,{}> {
   componentDidMount() {}
 
   action = (event) => {}
-  encode = (event) => {}
-  decode = (event) => {}
+  encode = (event) => {
+    $("#inputArea").val(encodeURIComponent($("#outputArea").val()));
+  }
+  decode = (event) => {
+    $("#outputArea").val(decodeURIComponent($("#inputArea").val()));
+  }
 
   render() {
     return (

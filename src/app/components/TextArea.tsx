@@ -109,25 +109,37 @@ class TextArea extends React.Component<TextAreaProps,{}> {
                 <span>Replace</span>
               </button> : null
             }
+            {
+              this.props.encode ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.encode}>
+                <span>Encode</span>
+              </button> : null
+            }
+            {
+              this.props.decode ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.decode}>
+                <span>Decode</span>
+              </button> : null
+            }
             <button className="btn btn-outline-secondary" onClick={this.cleanAll}>
               <span>Clear</span>
             </button>
           </div>
         </div>
-        <form className="row">
-          <div className="form-group col-md-12 mb-1">
-            <label htmlFor="exampleInputEmail1" className="col-2">Find</label>
-            <input type="text" className="form-control col-4" id="inputFind" aria-describedby="" placeholder="Find"/>
-            {/* <span className="material-symbols-outlined">match_case</span>
-            <span className="material-symbols-outlined">match_word</span>
-            <span className="material-symbols-outlined">regular_expression</span>
-            <span className="material-symbols-outlined">select</span> */}
-          </div>
-          <div className="form-group col-md-12">
-            <label htmlFor="exampleInputEmail1" className="col-2">Replace</label>
-            <input type="text" className="form-control col-4" id="inputReplace" aria-describedby="" placeholder="Replace"/>
-          </div>
-        </form>
+        {
+          this.props.replace ? <form className="row">
+            <div className="form-group col-md-12 mb-1">
+              <label htmlFor="exampleInputEmail1" className="col-2">Find</label>
+              <input type="text" className="form-control col-4" id="inputFind" aria-describedby="" placeholder="Find"/>
+              {/* <span className="material-symbols-outlined">match_case</span>
+              <span className="material-symbols-outlined">match_word</span>
+              <span className="material-symbols-outlined">regular_expression</span>
+              <span className="material-symbols-outlined">select</span> */}
+            </div>
+            <div className="form-group col-md-12">
+              <label htmlFor="exampleInputEmail1" className="col-2">Replace</label>
+              <input type="text" className="form-control col-4" id="inputReplace" aria-describedby="" placeholder="Replace"/>
+            </div>
+          </form> : null
+        }
         { this.props.options ? this.props.options() : null }
         <div className="row">
           <div className="col-md-6 mb-4">

@@ -6,6 +6,7 @@ import Html from "../pages/Html"
 import Json from "../pages/Json"
 import Replace from "../pages/Replace"
 import Url from "../pages/Url"
+import Unicode from "../pages/Unicode"
 
 interface WrapperProps extends Props {}
 
@@ -50,6 +51,7 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     } else if(first === 'encode' || first === 'decode') {
       action = first;
       type = second;
+      let actor = ACTOR_NAME[action];
       title = type.substring(0,1).toUpperCase()+type.substring(1) + ' Encoder/Decoder';
     }
 

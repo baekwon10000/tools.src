@@ -1,6 +1,9 @@
 import React from "react"
-import {connect} from 'react-redux';
+import {connect} from "react-redux";
 import {Props, ComponentProps} from "../types";
+import TextArea from "./TextArea";
+
+declare let $; //, replaceAll;
 
 class Unicode extends React.Component<ComponentProps,{}> {
 
@@ -15,10 +18,27 @@ class Unicode extends React.Component<ComponentProps,{}> {
   componentDidMount() {}
 
   action = (event) => {}
-  encode = (event) => {}
-  decode = (event) => {}
+
+  replaceAll = (value, original, replace) => { 
+    while(1) {
+      if(value.indexOf(original) != -1)
+        value = value.replace(original, replace);
+      else
+        break;
+    }
+    return value;
+  }
+
+  encode = (event) => {
+    $("#outputArea").val(escape(this.replaceAll($("#inputArea").val(), "\\", "%")));
+  }
+  decode = (event) => {
+    $("#inputArea").val(unescape(this.replaceAll($("#outputArea").val(), "\\", "%")));
+  }
+  options = () => {}
 
   render() {
+    const {type, action} = this.props;
     return (
       <div className="url">
         <TextArea
@@ -26,6 +46,9 @@ class Unicode extends React.Component<ComponentProps,{}> {
           type={type}
           // setSampleData={this.setHtmlSampleData}
           // action={this.action}
+          encode={this.encode}
+          decode={this.decode}
+          options={this.options}
         />
       </div>
     )

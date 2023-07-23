@@ -2,6 +2,8 @@ export const ACTOR_NAME = {
   'beautify': 'beatuifier',
   'minify': 'minifier',
   'verify': 'verifier',
+  'encode': 'encoder',
+  'decode': 'decoder',
 }
 
 export const SAMPLE_DATA = {
