@@ -89,7 +89,7 @@ export class MainLayout extends React.Component<Props, {}> {
                     <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Encoder/Decoder</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
                       <a className="dropdown-item" href="#">Unicode</a>
-                      <a className="dropdown-item" href="#">Url</a>
+                      <a className="dropdown-item" href="/encoder/url">Url</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
                   </li>

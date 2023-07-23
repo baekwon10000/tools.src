@@ -5,6 +5,7 @@ import Main from "../pages/Main"
 import Html from "../pages/Html"
 import Json from "../pages/Json"
 import Replace from "../pages/Replace"
+import Url from "../pages/Url"
 
 interface WrapperProps extends Props {}
 
@@ -46,12 +47,21 @@ class Wrapper extends React.Component<WrapperProps,{}> {
       action = first;
       type = 'html';
       title = 'Html Tag Remover';
+    } else if(first === 'encode' || first === 'decode') {
+      action = first;
+      type = second;
+      title = type.substring(0,1).toUpperCase()+type.substring(1) + ' Encoder/Decoder';
     }
 
     // let inputEditorMode, outputEditorMode, beautify, minify, verify, options;
 
     let component;
-    if(action === 'replace') component = (<Replace type={type}/>)
+    if(action === 'encode' || action === 'decode' ) {
+      if(type === 'url')
+        component = (<Url type={type}/>)
+      else //if(type === 'unicode')
+        component = (<Unicode type={type}/>)
+    } else if(action === 'replace') component = (<Replace type={type}/>)
     else if(type === 'html') component = (<Html type={type} action={action}/>)
     else if(type === 'json') component = (<Json type={type} action={action}/>)
     else component = (<Main/>)
