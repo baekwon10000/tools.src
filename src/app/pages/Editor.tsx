@@ -137,9 +137,18 @@ class Editor extends React.Component<EditorProps,{}> {
   
   // Output
   copyTextOutputEditor = (event) => {
+
     this.outputACEEditor.selectAll();
     this.outputACEEditor.focus();
     document.execCommand("copy");
+
+    // 말풍선 효과
+    let el = document.querySelector('#outputcopy');
+    el.classList.add("active");
+    setTimeout(function () {
+      el.classList.remove("active");
+    }, 2000);
+
   }
   selectOutputEditor = (event) => {
     this.outputACEEditor.selectAll();
@@ -256,7 +265,7 @@ class Editor extends React.Component<EditorProps,{}> {
                   <i>Output</i>
                 </label>
                 <div id="outputToolBar" className="editortoolbar btn-group-sm">
-                  <a href="#" id="outputcopy" className="icon" title="Copy to Clipboard" onClick={this.copyTextOutputEditor}>
+                  <a href="#" id="outputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextOutputEditor}>
                     <svg className="svgicon">
                       <use href="#copy"></use>
                     </svg>
