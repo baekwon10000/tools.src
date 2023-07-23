@@ -44,35 +44,35 @@ class Html extends React.Component<ComponentProps,{}> {
     });
   }
 
-  byId = (id: string): HTMLInputElement => {
-    return document.getElementById(id); // as HTMLInputElement | null;
+  byId = (id: string): HTMLInputElement | null => {
+    return document.getElementById(id) as HTMLInputElement;
   }
 
   getOptions = () => {
     return {
-      removeIgnored:                  this.byId('remove-ignored').checked,
-      removeComments:                 this.byId('remove-comments').checked,
-      removeCommentsFromCDATA:        this.byId('remove-comments-from-cdata').checked,
-      removeCDATASectionsFromCDATA:   this.byId('remove-cdata-sections-from-cdata').checked,
-      collapseWhitespace:             this.byId('collapse-whitespace').checked,
-      conservativeCollapse:           this.byId('conservative-collapse').checked,
-      collapseBooleanAttributes:      this.byId('collapse-boolean-attributes').checked,
-      removeAttributeQuotes:          this.byId('remove-attribute-quotes').checked,
-      removeRedundantAttributes:      this.byId('remove-redundant-attributes').checked,
-      useShortDoctype:                this.byId('use-short-doctype').checked,
-      removeEmptyAttributes:          this.byId('remove-empty-attributes').checked,
-      removeEmptyElements:            this.byId('remove-empty-elements').checked,
-      removeOptionalTags:             this.byId('remove-optional-tags').checked,
-      removeScriptTypeAttributes:     this.byId('remove-script-type-attributes').checked,
-      removeStyleLinkTypeAttributes:  this.byId('remove-style-link-type-attributes').checked,
-      caseSensitive:                  this.byId('case-sensitive').checked,
-      keepClosingSlash:               this.byId('keep-closing-slash').checked,
-      minifyJS:                       this.byId('minify-js').checked,
-      // processScripts:                 this.byId('minify-js-templates').checked ? this.byId('minify-js-templates-type').value : false,
-      minifyCSS:                      this.byId('minify-css').checked,
-      minifyURLs:                     this.byId('minify-urls').checked ? { site:this.byId('minify-urls-siteurl').value } : false,
-      // lint:                           this.byId('use-htmllint').checked ? new HTMLLint() : null,
-      // maxLineLength:                  parseInt(this.byId('max-line-length').value, 10)
+      removeIgnored:                  this.byId('remove-ignored')?.checked,
+      removeComments:                 this.byId('remove-comments')?.checked,
+      removeCommentsFromCDATA:        this.byId('remove-comments-from-cdata')?.checked,
+      removeCDATASectionsFromCDATA:   this.byId('remove-cdata-sections-from-cdata')?.checked,
+      collapseWhitespace:             this.byId('collapse-whitespace')?.checked,
+      conservativeCollapse:           this.byId('conservative-collapse')?.checked,
+      collapseBooleanAttributes:      this.byId('collapse-boolean-attributes')?.checked,
+      removeAttributeQuotes:          this.byId('remove-attribute-quotes')?.checked,
+      removeRedundantAttributes:      this.byId('remove-redundant-attributes')?.checked,
+      useShortDoctype:                this.byId('use-short-doctype')?.checked,
+      removeEmptyAttributes:          this.byId('remove-empty-attributes')?.checked,
+      removeEmptyElements:            this.byId('remove-empty-elements')?.checked,
+      removeOptionalTags:             this.byId('remove-optional-tags')?.checked,
+      removeScriptTypeAttributes:     this.byId('remove-script-type-attributes')?.checked,
+      removeStyleLinkTypeAttributes:  this.byId('remove-style-link-type-attributes')?.checked,
+      caseSensitive:                  this.byId('case-sensitive')?.checked,
+      keepClosingSlash:               this.byId('keep-closing-slash')?.checked,
+      minifyJS:                       this.byId('minify-js')?.checked,
+      // processScripts:                 this.byId('minify-js-templates')?.checked ? this.byId('minify-js-templates-type')?.value : false,
+      minifyCSS:                      this.byId('minify-css')?.checked,
+      minifyURLs:                     this.byId('minify-urls')?.checked ? { site:this.byId('minify-urls-siteurl')?.value } : false,
+      // lint:                           this.byId('use-htmllint')?.checked ? new HTMLLint() : null,
+      // maxLineLength:                  parseInt(this.byId('max-line-length')?.value, 10)
     };
   }
 
