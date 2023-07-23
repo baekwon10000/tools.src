@@ -1,6 +1,8 @@
 import React from "react"
+import {connect} from 'react-redux';
+import {Props, ComponentProps} from "../types";
 
-class Sample extends React.Component {
+class Sample extends React.Component<ComponentProps,{}> {
 
   constructor(props) {
     super(props);
@@ -17,4 +19,4 @@ class Sample extends React.Component {
   }
 }
 
-export default Sample;
+export default connect()(Sample);
