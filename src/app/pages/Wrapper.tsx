@@ -1,6 +1,6 @@
 import React from "react"
 import {Props} from "../types"
-import {NAME_MAP} from "../constants"
+import {ACTOR_NAME} from "../constants"
 import Main from "../pages/Main"
 import Html from "../pages/Html"
 import Json from "../pages/Json"

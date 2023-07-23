@@ -1,4 +1,4 @@
-export const NAME_MAP = {
+export const ACTOR_NAME = {
   'beautify':'beatuifier',
   'minify':'minifier',
   'verify':'verifier',
