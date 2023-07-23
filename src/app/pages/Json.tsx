@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import Editors from './Editor'
 import utils from "../utils/utils";
 import {Props, ComponentProps} from "../types";
+import {SAMPLE_DATA} from "../constants";
 
 // let jsonlint, $;
 declare let jsonlint, $;
@@ -21,30 +22,7 @@ class Json extends React.Component<ComponentProps,{}> {
   }
   
   setJsonSampleData = (event) => {
-    let sampleData = `{
-  "employees": {
-      "employee": [
-          {
-              "id": "1",
-              "firstName": "Scarlett",
-              "lastName": "Johansson",
-              "photo": "http://si.wsj.net/public/resources/images/BN-BY925_mag041_OZ_20140318165119.jpg"
-          },
-          {
-              "id": "2",
-              "firstName": "Chris",
-              "lastName": "Evans",
-              "photo": "https://pbs.twimg.com/profile_images/605082381528096769/gt_sJRot.png"
-          },
-          {
-              "id": "3",
-              "firstName": "Jeremy",
-              "lastName": "Renner",
-              "photo": "https://pbs.twimg.com/profile_images/603945839795412992/XTssKbRC.jpg"
-          }
-      ]
-  }
-}`;
+    let sampleData = SAMPLE_DATA.json;
     this.editors.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
   }
 

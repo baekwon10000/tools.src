@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Editors from './Editor'
 import utils from "../utils/utils";
+import {SAMPLE_DATA} from '../constants';
 // import $ from "jquery";
 // window.jQuery = $;
 import {Props, ComponentProps} from "../types";
@@ -27,23 +28,7 @@ class Html extends React.Component<ComponentProps,{}> {
   }
   
   setHtmlSampleData = (event) => {
-    
-    let sampleData = `<!DOCTYPE html>
-<html>
-  <head>
-    <title>Largest companies by market cap — US Stock Market</title>
-    <meta charset='UTF-8'>
-  </head>
-  <body>
-    <h1>Apple : 2010 Billion</h1>
-    <h2>Saudi Aramco : 1812 Billion</h2>
-    <h3>Microsoft : 1800 Billion</h3>
-    <h4>Alphabet (Google) : 1155 Billion</h4>
-    <h5>Amazon : 869 Billion</h5>
-    <b>This data is as of 21 Dec 2022.</b>
-  </body>
-</html>`;
-
+    let sampleData = SAMPLE_DATA.html;
     // let editor = this.inputACEEditor;
     // editor.setValue(sampleData, 1);
     this.editors.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
