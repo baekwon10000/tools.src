@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Editors from './Editor'
+import Editor from './Editor'
 import utils from "../utils/utils";
 import {Props, ComponentProps} from "../types";
 import {SAMPLE_DATA} from "../constants";
@@ -11,7 +11,7 @@ declare let jsonlint, $;
 class Json extends React.Component<ComponentProps,{}> {
 
   // Refs
-  editors = null;
+  editor = null;
 
   // Constants
   JSON_VERIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/jsonlint/1.6.0/jsonlint.min.js';
@@ -23,7 +23,7 @@ class Json extends React.Component<ComponentProps,{}> {
   
   setJsonSampleData = (event) => {
     let sampleData = SAMPLE_DATA.json;
-    this.editors.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
+    this.editor.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
   }
 
   beautifyJson = (event) => {
@@ -35,8 +35,8 @@ class Json extends React.Component<ComponentProps,{}> {
   verifyJson = (event) => {
     let self = this;
     utils.loadScript(this.JSON_VERIFIER_URL, function() {
-      let inputEditor = self.editors.getWrappedInstance().inputACEEditor;
-      let outputEditor = self.editors.getWrappedInstance().outputACEEditor;
+      let inputEditor = self.editor.getWrappedInstance().inputACEEditor;
+      let outputEditor = self.editor.getWrappedInstance().outputACEEditor;
       let data = inputEditor.getValue();
       if($.trim(data) != '') {
         try {
@@ -65,8 +65,8 @@ class Json extends React.Component<ComponentProps,{}> {
     }
 
     return (
-      <Editors
-        ref={ref => this.editors = ref}
+      <Editor
+        ref={ref => this.editor = ref}
         type={type}
         inputEditorMode={inputEditorMode}
         outputEditorMode={outputEditorMode}

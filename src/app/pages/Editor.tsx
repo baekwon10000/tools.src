@@ -5,7 +5,7 @@ import {Props} from "../types";
 // let ace, $;
 declare let ace, $;
 
-interface EditorsProps extends Props {
+interface EditorProps extends Props {
 
   type: string;
   inputEditorMode: string;
@@ -20,7 +20,7 @@ interface EditorsProps extends Props {
 
 }
 
-class Editors extends React.Component<EditorsProps,{}> {
+class Editor extends React.Component<EditorProps,{}> {
 
   ace_common_options = {
     showPrintMargin: false,
@@ -299,4 +299,4 @@ class Editors extends React.Component<EditorsProps,{}> {
 // Editors.propTypes = {};
 // Editors.defaultProps = {};
 
-export default connect(null, null, null, {withRef:true})(Editors);
+export default connect(null, null, null, {withRef:true})(Editor);

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Editors from './Editor'
+import Editor from './Editor'
 import utils from "../utils/utils";
 import {SAMPLE_DATA} from '../constants';
 // import $ from "jquery";
@@ -13,7 +13,7 @@ declare let beautifier, minify;
 class Html extends React.Component<ComponentProps,{}> {
 
   // Refs
-  editors: any = null;
+  editor: any = null;
 
   // Constants
   HTML_BEAUTIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautifier.js';
@@ -31,7 +31,7 @@ class Html extends React.Component<ComponentProps,{}> {
     let sampleData = SAMPLE_DATA.html;
     // let editor = this.inputACEEditor;
     // editor.setValue(sampleData, 1);
-    this.editors.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
+    this.editor.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
   }
 
   beautifyHtml = (event) => {
@@ -41,9 +41,9 @@ class Html extends React.Component<ComponentProps,{}> {
         'indent_size': '2',
         'indent_char': ' ',
       };
-      let inputEditor = self.editors.getWrappedInstance().inputACEEditor;
+      let inputEditor = self.editor.getWrappedInstance().inputACEEditor;
       let output = beautifier.html(inputEditor.getValue(), opts);
-      let outputEditor = self.editors.getWrappedInstance().outputACEEditor;
+      let outputEditor = self.editor.getWrappedInstance().outputACEEditor;
       outputEditor.setValue(output, 1);
     });
   }
@@ -83,9 +83,9 @@ class Html extends React.Component<ComponentProps,{}> {
   minifyHtml = (event) => {
     let self = this;
     utils.loadScript(this.HTML_MINIFIER_URL, function() {
-      let inputEditor = self.editors.getWrappedInstance().inputACEEditor;
+      let inputEditor = self.editor.getWrappedInstance().inputACEEditor;
       let output = minify(inputEditor.getValue(), self.getOptions.bind(self)());
-      let outputEditor = self.editors.getWrappedInstance().outputACEEditor;
+      let outputEditor = self.editor.getWrappedInstance().outputACEEditor;
       outputEditor.setValue(output);
     });
   }
@@ -338,8 +338,8 @@ class Html extends React.Component<ComponentProps,{}> {
     }
 
     return (
-      <Editors
-        ref={ref => this.editors = ref}
+      <Editor
+        ref={ref => this.editor = ref}
         type={type}
         inputEditorMode={inputEditorMode}
         outputEditorMode={outputEditorMode}
