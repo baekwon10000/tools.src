@@ -4,5 +4,17 @@
     "module": "commonjs",
     "jsx": "react",
     "esModuleInterop": true,
+    /* "module": "esnext",
+    "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true, */
   }
 }
