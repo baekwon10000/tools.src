@@ -6,6 +6,7 @@ import utils from "../utils/utils";
 // window.jQuery = $;
 import {Props, ComponentProps} from "../types";
 
+declare let beautifier, minify;
 // let beautifier, minify;
 
 class Html extends React.Component<ComponentProps,{}> {

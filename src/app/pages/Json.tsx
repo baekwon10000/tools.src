@@ -5,6 +5,7 @@ import utils from "../utils/utils";
 import {Props, ComponentProps} from "../types";
 
 // let jsonlint, $;
+declare let jsonlint, $;
 
 class Json extends React.Component<ComponentProps,{}> {
 

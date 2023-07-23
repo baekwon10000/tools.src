@@ -3,18 +3,19 @@ import {connect} from "react-redux";
 import {Props} from "../types";
 
 // let ace, $;
+declare let ace, $;
 
 interface EditorsProps extends Props {
 
   type: string;
   inputEditorMode: string;
   outputEditorMode: string;
-  setSampleData: Function;
+  setSampleData: React.MouseEventHandler<HTMLAnchorElement>;
   
   //
-  beautify: MouseEventHandler<HTMLButtonElement>;
-  minify: MouseEventHandler<HTMLButtonElement>;
-  verify: MouseEventHandler<HTMLButtonElement>;
+  beautify: React.MouseEventHandler<HTMLButtonElement>;
+  minify: React.MouseEventHandler<HTMLButtonElement>;
+  verify: React.MouseEventHandler<HTMLButtonElement>;
   options: Function;
 
 }
