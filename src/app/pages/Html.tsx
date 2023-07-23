@@ -1,10 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Editor from './Editor'
-import utils from "../utils/utils";
+import utils from '../utils/utils';
 import {SAMPLE_DATA} from '../constants';
-// import $ from "jquery";
-// window.jQuery = $;
 import {Props, ComponentProps} from "../types";
 
 declare let beautifier, minify;
@@ -29,8 +27,6 @@ class Html extends React.Component<ComponentProps,{}> {
   
   setHtmlSampleData = (event) => {
     let sampleData = SAMPLE_DATA.html;
-    // let editor = this.inputACEEditor;
-    // editor.setValue(sampleData, 1);
     this.editor.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
   }
 

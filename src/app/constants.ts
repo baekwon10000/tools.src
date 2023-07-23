@@ -1,7 +1,7 @@
 export const ACTOR_NAME = {
-  'beautify':'beatuifier',
-  'minify':'minifier',
-  'verify':'verifier',
+  'beautify': 'beatuifier',
+  'minify': 'minifier',
+  'verify': 'verifier',
 }
 
 export const SAMPLE_DATA = {
@@ -43,4 +43,5 @@ export const SAMPLE_DATA = {
           }
       ]
   }
-}`,}
+}`,
+}
