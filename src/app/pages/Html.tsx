@@ -315,7 +315,7 @@ class Html extends React.Component<ComponentProps,{}> {
   )
 
   render() {
-
+    // console.log('this.props = ', this.props);
     const {type, action} = this.props;
     let inputEditorMode, outputEditorMode, beautify, minify, options;
 
@@ -334,17 +334,19 @@ class Html extends React.Component<ComponentProps,{}> {
     }
 
     return (
-      <Editor
-        ref={ref => this.editor = ref}
-        type={type}
-        inputEditorMode={inputEditorMode}
-        outputEditorMode={outputEditorMode}
-        setSampleData={this.setHtmlSampleData}
-        beautify={beautify}
-        minify={minify}
-        // verify={this.verifyHtml}
-        options={options}
-      />
+      <div className="html">
+        <Editor
+          ref={ref => this.editor = ref}
+          type={type}
+          inputEditorMode={inputEditorMode}
+          outputEditorMode={outputEditorMode}
+          setSampleData={this.setHtmlSampleData}
+          beautify={beautify}
+          minify={minify}
+          // verify={this.verifyHtml}
+          options={options}
+        />
+      </div>
     )
   }
 }

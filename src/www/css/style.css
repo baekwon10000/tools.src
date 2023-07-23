@@ -20,7 +20,7 @@ label {margin-bottom:0;}
 .hidden {display:none;}
 .btn-outline-secondary:focus {box-shadow:none;}
 
-/* Start */
+/* App */
 header .navbar-brand {padding:0;height:32px;}
 header .navbar-brand span {font-size:32px;}
 header ul.contacts {position:absolute;right:16px;top:8px;line-height:40px;}
