@@ -93,6 +93,14 @@ export class MainLayout extends React.Component<Props, {}> {
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
                   </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Etc</a>
+                    <div className="dropdown-menu" aria-labelledby="dropdown04">
+                      <a className="dropdown-item" href="/replace">Html Tag Remover</a>
+                      <a className="dropdown-item" href="#">툴이름</a>
+                      <a className="dropdown-item" href="#">툴이름</a>
+                    </div>
+                  </li>
                 </ul>
                 <ul className="contacts">
                   <li>

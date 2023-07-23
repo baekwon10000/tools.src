@@ -56,11 +56,11 @@ header ul.contacts li a:hover span {color:#5d93ff;}
   height: 16px;
 }
 
-.aceEditorBorder {
+.aceEditorBorder, .editorBorder {
   border: 1px solid #4a4a4a;
 }
 
-.aceEditorMenu {
+.aceEditorMenu, .editorMenu {
   width: 100%;
   height: 35px;
   margin: 0;
@@ -72,12 +72,12 @@ header ul.contacts li a:hover span {color:#5d93ff;}
   border-bottom: 1px solid #727272;
 }
 
-.aceEditorMenuLabel {
+.aceEditorMenuLabel, .editorMenuLabel {
   padding-left: .5rem;
   vertical-align: middle;
 }
 
-.aceEditorMenu a {
+.aceEditorMenu a, .editorMenu a {
   margin: 0 6px;
   padding-top: 7px;
   color: #f5f5f5;
@@ -141,6 +141,9 @@ a.copytext.active:after {
   flex-grow: 1;
   flex-shrink: 1;
 }
+
+.textarea textarea {width:100%;height:100%;border:0;resize:none;padding:5px;font-size:14px;}
+.textarea form label {display:none;}
 
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
 footer .wrap {max-width:1024px;margin:0 auto;}
