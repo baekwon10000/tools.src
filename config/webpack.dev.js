@@ -14,9 +14,9 @@ module.exports = merge(common, {
     hot: true,
     liveReload: true,
     // stats: 'errors-only',
-    devMiddleware: {
-      stats: 'errors-only',
-    },
+    // devMiddleware: {
+    //   stats: 'errors-only',
+    // },
     host: '0.0.0.0',
     port: 4000,
   },
