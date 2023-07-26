@@ -20,7 +20,7 @@ class Url extends React.Component<ComponentProps,{}> {
 
   setSampleData = () => {
     let sampleData = SAMPLE_DATA.url;
-    $("#inputArea").val(sampleData).trigger("keyup");
+    $("#inputArea").val(sampleData).trigger("updateStatusBar");
   }
 
   action = (event) => {}

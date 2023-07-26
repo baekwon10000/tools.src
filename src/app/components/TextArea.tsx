@@ -26,6 +26,8 @@ class TextArea extends React.Component<TextAreaProps,{}> {
   // Instants or Variables
   inputArea = null;
   outputArea = null;
+  $inputArea = null;
+  $outputArea = null;
 
   constructor(props) {
     super(props);
@@ -33,21 +35,52 @@ class TextArea extends React.Component<TextAreaProps,{}> {
   }
 
   componentDidMount() {
-    // this.inputArea.value = "<[^>]*>?";
-    // this.outputArea.value = "";
-    this.inputArea.addEventListener("change", function(event) {
-      console.log(this);
-      // console.log(this.value);
+    let self = this;
+    this.$inputArea = $('#inputArea');
+    this.$inputArea.on('keyup', (e) => {
+      this.updateInputAreaStatusBar();
+    });
+    this.$inputArea.on('mouseup updateStatusBar', (e) => {
+      this.updateInputAreaStatusBar();
+    });
+    this.$outputArea = $('#outputArea');
+    this.$outputArea.on('keyup', (e) => {
+      this.updateOutputAreaStatusBar();
+    });
+    this.$outputArea.on('mouseup updateStatusBar', (e) => {
+      this.updateOutputAreaStatusBar();
     });
   }
 
   componentWillUnmount() {
   }
 
+  getLnAndCol(textarea) {
+    let lines = textarea.value.substr(0, textarea.selectionStart).split("\n");
+    let ln = lines.length;
+    let col = lines[lines.length-1].length;
+    // console.log("Current Line Number: " + ln + ", Current Column Index: " + col);
+    return {ln:ln,col:col};
+  }
+
+  updateInputAreaStatusBar() {
+    let lead = this.getLnAndCol(this.inputArea);
+    document.getElementById('inputLineColumn').textContent = `Ln: ${lead.ln} Col: ${lead.col}`;
+    document.getElementById('inputTextSize').textContent = `Size: ${this.inputArea.textLength}`;
+  }
+
+  updateOutputAreaStatusBar() {
+    let lead = this.getLnAndCol(this.outputArea);
+    document.getElementById('outputLineColumn').textContent = `Ln: ${lead.ln} Col: ${lead.col}`;
+    document.getElementById('outputTextSize').textContent = `Size: ${this.outputArea.textLength}`;
+  }
+
   // 
   cleanAll = (event) => {
-    this.inputArea.value = "";
-    this.outputArea.value = "";
+    // this.inputArea.value = "";
+    // this.outputArea.value = "";
+    this.$inputArea.val("").trigger("updateStatusBar");
+    this.$outputArea.val("").trigger("updateStatusBar");
   }
 
   // Input
@@ -65,8 +98,10 @@ class TextArea extends React.Component<TextAreaProps,{}> {
     }, 2000);
 
   }
+
   cleanInputArea = (event) => {
-    this.inputArea.value = "";
+    // this.inputArea.value = "";
+    this.$inputArea.val("").trigger("updateStatusBar");
   }
   
   // Output
@@ -85,7 +120,8 @@ class TextArea extends React.Component<TextAreaProps,{}> {
 
   }
   cleanOutputArea = (event) => {
-    this.outputArea.value = "";
+    // this.outputArea.value = "";
+    this.$outputArea.val("").trigger("updateStatusBar");
   }
 
   options = (e) => {

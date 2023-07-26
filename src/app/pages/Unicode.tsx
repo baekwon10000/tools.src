@@ -40,7 +40,7 @@ class Unicode extends React.Component<ComponentProps,{}> {
 
   setSampleData = () => {
     let sampleData = SAMPLE_DATA.unicode;
-    $("#inputArea").val(sampleData).trigger("keyup");
+    $("#inputArea").val(sampleData).trigger("updateStatusBar");
   }
 
   options = () => {}
