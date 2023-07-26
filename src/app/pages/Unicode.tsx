@@ -62,6 +62,7 @@ class Unicode extends React.Component<ComponentProps,{}> {
         <TextArea
           ref={ref => this.textarea = ref}
           type={type}
+          action={action}
           setSampleData={this.setSampleData}
           // action={this.action}
           // encode={this.encode}

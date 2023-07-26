@@ -8,12 +8,13 @@ interface TextAreaProps extends Props {
 
   //
   type: string;
+  action: string;
   inputEditorMode: string;
   outputEditorMode: string;
   setSampleData: React.MouseEventHandler<HTMLAnchorElement>;
   
   //
-  action: React.MouseEventHandler<HTMLButtonElement>;
+  // action: React.MouseEventHandler<HTMLButtonElement>;
   replace: React.MouseEventHandler<HTMLButtonElement>;
   encode: React.MouseEventHandler<HTMLButtonElement>;
   decode: React.MouseEventHandler<HTMLButtonElement>;
@@ -141,6 +142,12 @@ class TextArea extends React.Component<TextAreaProps,{}> {
 
   render() {
     // console.log('this.props = ', this.props);
+    const {type, action} = this.props;
+    let leftPanelName = 'Input', rightPanelName = 'Output';
+    if(action === 'encode' || action === 'decode') {
+      leftPanelName = 'Decode', rightPanelName = 'Encode';
+    }
+
     return (
       <div className="textarea">
         <div className="row mb-3">
@@ -196,7 +203,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
             <div id="inputDiv" className="editorBorder">
               <div className="editorMenu">
                 <label className="editorMenuLabel">
-                  <i>Input</i>
+                  <i>{leftPanelName}</i>
                 </label>
                 <div className="editortoolbar btn-group-sm">
                   <a href="#" id="inputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextInputArea}>
@@ -235,7 +242,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
             <div id="outputDiv" className="editorBorder">
               <div className="editorMenu">
                 <label className="editorMenuLabel">
-                  <i>Output</i>
+                  <i>{rightPanelName}</i>
                 </label>
                 <div id="outputToolBar" className="editortoolbar btn-group-sm">
                   <a href="#" id="outputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextOutputArea}>

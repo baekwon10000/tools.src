@@ -60,9 +60,9 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     let component;
     if(action === 'encode' || action === 'decode' ) {
       if(type === 'url')
-        component = (<Url type={type}/>)
+        component = (<Url action={action} type={type}/>)
       else //if(type === 'unicode')
-        component = (<Unicode type={type}/>)
+        component = (<Unicode action={action} type={type}/>)
     } else if(action === 'replace') component = (<Replace type={type}/>)
     else if(type === 'html') component = (<Html type={type} action={action}/>)
     else if(type === 'json') component = (<Json type={type} action={action}/>)
