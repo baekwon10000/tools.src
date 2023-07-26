@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux";
 import {Props, ComponentProps} from "../types";
 import TextArea from "../components/TextArea";
+import {SAMPLE_DATA} from '../constants';
 
 declare let $; //, replaceAll;
 
@@ -32,9 +33,16 @@ class Unicode extends React.Component<ComponentProps,{}> {
   encode = (event) => {
     $("#outputArea").val(escape(this.replaceAll($("#inputArea").val(), "\\", "%")));
   }
+
   decode = (event) => {
     $("#inputArea").val(unescape(this.replaceAll($("#outputArea").val(), "\\", "%")));
   }
+
+  setSampleData = () => {
+    let sampleData = SAMPLE_DATA.unicode;
+    $("#inputArea").val(sampleData).trigger("keyup");
+  }
+
   options = () => {}
 
   render() {
@@ -44,11 +52,11 @@ class Unicode extends React.Component<ComponentProps,{}> {
         <TextArea
           ref={ref => this.textarea = ref}
           type={type}
-          // setSampleData={this.setHtmlSampleData}
+          setSampleData={this.setSampleData}
           // action={this.action}
           encode={this.encode}
           decode={this.decode}
-          options={this.options}
+          // options={this.options}
         />
       </div>
     )

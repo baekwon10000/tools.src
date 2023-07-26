@@ -46,4 +46,6 @@ export const SAMPLE_DATA = {
       ]
   }
 }`,
+  unicode: `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ`,
+  url: `https://github.com/baekwon10000/tools.src`,
 }
