@@ -153,18 +153,42 @@ footer p {margin-bottom:0;}
 ._404 section h1 {font-size:2em;margin:0.67em 0px;}
 ._404 section p {}
 
-/* Options */
-.quiet { font-size: 0.85em; color: #888; }
-.short { display: inline-block; width: 20em; margin-top: 0.25em; }
-.unsafe { color: #f33; }
+/* Html Beautify Options */
+.html.beautify select, .html.beautify .buttons-box button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  line-height: 1.5em;
+  padding: 0.5em;
+  margin: 0 0 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-#options ul {list-style:none;padding:0.5em;overflow:hidden;margin-top:0;}
-#options ul li {float:left;clear:both;padding-bottom:0.5em;}
-#options ul li div {margin-left:1.75em;}
-#options label, #options input {float:left;}
-#options label {line-height:18px;}
-#options label.sub-option {margin-left:22px;margin-right:5px}
-#options input {margin:3px 8px 3px 4px;}
+.html.beautify select {
+  display: block;
+}
+
+.html.beautify .options-checkboxes, .html.beautify .options-select {
+  display: inline-table;
+  max-width: 100%;
+}
+
+.html.beautify input[type="checkbox"] {margin-right:5px;}
+
+/* Html Minify Options */
+.html.minify .quiet { font-size: 0.85em; color: #888; }
+.html.minify .short { display: inline-block; width: 20em; margin-top: 0.25em; }
+.html.minify .unsafe { color: #f33; }
+
+.html.minify #options ul {list-style:none;padding:0.5em;overflow:hidden;margin-top:0;}
+.html.minify #options ul li {float:left;clear:both;padding-bottom:0.5em;}
+.html.minify #options ul li div {margin-left:1.75em;}
+.html.minify #options label, .html.minify #options input {float:left;}
+.html.minify #options label {line-height:18px;}
+.html.minify #options label.sub-option {margin-left:22px;margin-right:5px}
+.html.minify #options input {margin:3px 8px 3px 4px;}
 
 /* Replace */
 .replace form label {/* display:none; */width:80px;}

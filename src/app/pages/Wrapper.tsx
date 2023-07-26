@@ -40,8 +40,7 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     let type, action, title; //, defaultAction = '';
     if(first === 'html' || first === 'json') {
       type = first;
-      if(first === 'html') action = 'beautify';
-      else if(first === 'json') action = 'verify';
+      action = second;
       let actor = ACTOR_NAME[action];
       title = type.substring(0,1).toUpperCase()+type.substring(1) + ' ' + actor.substring(0,1).toUpperCase()+actor.substring(1);
     } else if(first === 'replace') {
