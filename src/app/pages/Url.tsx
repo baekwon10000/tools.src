@@ -33,11 +33,11 @@ class Url extends React.Component<ComponentProps,{}> {
 
   onInputAreaKeyUp = (event) => {
     $("#outputArea").val(encodeURIComponent($("#inputArea").val())).trigger("updateStatusBar");
-    $("#inputArea").trigger("updateStatusBar");
+    // $("#inputArea").trigger("updateStatusBar");
   }
   onOutputAreaKeyUp = (event) => {
     $("#inputArea").val(decodeURIComponent($("#outputArea").val())).trigger("updateStatusBar");
-    $("#outputArea").trigger("updateStatusBar");
+    // $("#outputArea").trigger("updateStatusBar");
   }
 
   render() {

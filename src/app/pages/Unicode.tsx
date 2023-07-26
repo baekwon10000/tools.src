@@ -47,12 +47,12 @@ class Unicode extends React.Component<ComponentProps,{}> {
 
   onInputAreaKeyUp = (event) => {
     $("#outputArea").val(escape(this.replaceAll($("#inputArea").val(), "\\", "%"))).trigger("updateStatusBar"); //.trigger("change");
-    $("#inputArea").trigger("updateStatusBar");
+    // $("#inputArea").trigger("updateStatusBar");
   }
 
   onOutputAreaKeyUp = (event) => {
     $("#inputArea").val(unescape(this.replaceAll($("#outputArea").val(), "\\", "%"))).trigger("updateStatusBar"); //.trigger("change");
-    $("#outputArea").trigger("updateStatusBar");
+    // $("#outputArea").trigger("updateStatusBar");
   }
 
   render() {
