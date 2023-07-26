@@ -56,7 +56,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="/html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beautifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown01">
-                      <a className="dropdown-item" href="/html/beautify">Html</a>
+                      <a className="dropdown-item" href="/beautify/html">Html</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
@@ -64,7 +64,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="/html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown02">
-                      <a className="dropdown-item" href="/html/minify">Html</a>
+                      <a className="dropdown-item" href="/minify/html">Html</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
@@ -72,7 +72,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="/json" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown03">
-                      <a className="dropdown-item" href="/json/verify">Json</a>
+                      <a className="dropdown-item" href="/verify/json">Json</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
@@ -134,7 +134,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="col-6 col-md">
                 <h5>Beautifier</h5>
                 <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/html">Html</a></li>
+                  <li><a className="text-muted" href="/beautify/html">Html</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
@@ -143,7 +143,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="col-6 col-md">
                 <h5>Minifier</h5>
                 <ul className="list-unstyled text-small">
-                <li><a className="text-muted" href="/html">Html</a></li>
+                <li><a className="text-muted" href="/minify/html">Html</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
@@ -152,7 +152,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="col-6 col-md">
                 <h5>Verifier</h5>
                 <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/json">Json</a></li>
+                  <li><a className="text-muted" href="/verify/json">Json</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
@@ -179,7 +179,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="col-6 col-md">
                 <h5>Etc</h5>
                 <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/replace">Html Tag Remover</a></li>
+                  <li><a className="text-muted" href="/replace/html">Html Tag Remover</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>

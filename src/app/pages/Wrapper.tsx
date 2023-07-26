@@ -33,24 +33,18 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     let pathname = this.props.location.pathname;
     pathname = pathname.startsWith('/') ? pathname.substring(1) : pathname;
     let split = pathname.split('/');
-    let first = split.length > 0 ? split[0] : ''; //, type = first;
-    let second = split.length > 1 ? split[1] : ''; //, action = second;
+    let first = split.length > 0 ? split[0] : '';
+    let second = split.length > 1 ? split[1] : '';
     let third = split.length > 2 ? split[2] : '';
 
-    let type, action, title; //, defaultAction = '';
-    if(first === 'html' || first === 'json') {
-      type = first;
-      action = second;
-      let actor = ACTOR_NAME[action];
+    let action = first, type = second;
+    let title, actor = ACTOR_NAME[action];
+
+    if(action === 'beautify' || first === 'minify') {
       title = type.substring(0,1).toUpperCase()+type.substring(1) + ' ' + actor.substring(0,1).toUpperCase()+actor.substring(1);
-    } else if(first === 'replace') {
-      action = first;
-      type = 'html';
+    } else if(action === 'replace') {
       title = 'Html Tag Remover';
-    } else if(first === 'encode' || first === 'decode') {
-      action = first;
-      type = second;
-      let actor = ACTOR_NAME[action];
+    } else if(action === 'encode' || action === 'decode') {
       title = type.substring(0,1).toUpperCase()+type.substring(1) + ' Encoder/Decoder';
     }
 
@@ -62,10 +56,17 @@ class Wrapper extends React.Component<WrapperProps,{}> {
         component = (<Url action={action} type={type}/>)
       else //if(type === 'unicode')
         component = (<Unicode action={action} type={type}/>)
-    } else if(action === 'replace') component = (<Replace type={type}/>)
-    else if(type === 'html') component = (<Html type={type} action={action}/>)
-    else if(type === 'json') component = (<Json type={type} action={action}/>)
-    else component = (<Main/>)
+    } else if(action === 'replace') {
+      component = (<Replace action={action} type={type}/>)
+    } else if(action === 'beautify') {
+      component = (<Html  action={action} type={type}/>)
+    } else if(action === 'minify') {
+      component = (<Html  action={action} type={type}/>)
+    } else if(type === 'verify') {
+      component = (<Json action={action} type={type}/>)
+    } else
+      component = (<Main/>)
+    
     // console.log('component = ', component);
 
     return (

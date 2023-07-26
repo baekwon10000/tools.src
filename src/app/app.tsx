@@ -33,10 +33,11 @@ const Root = () => (
       <Route path="/" component={MainLayout}>
         {
           [
-            'html', 'html/beautify', 'html/minify',
-            'json', 'json/verify',
-            'replace', 'replace/html', // 'regexp/replace/html'
-            'encode', 'encode/url', 'encode/unicode'
+            'beautify/html',
+            'minify/html',
+            'verify/json',
+            'replace/html',
+            'encode/url', 'encode/unicode'
           ].map((path,index)=><Route path={path} component={Wrapper} key={index}/>)
         }
         {/* <Route path="main" component={Main}/>
