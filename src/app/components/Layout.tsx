@@ -80,8 +80,8 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Converter</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
-                      <a className="dropdown-item" href="#">Json to Xml</a>
-                      <a className="dropdown-item" href="#">Xml to Json</a>
+                      <a className="dropdown-item" href="#">툴이름</a>
+                      <a className="dropdown-item" href="#">툴이름</a>
                       <a className="dropdown-item" href="#">툴이름</a>
                     </div>
                   </li>
@@ -159,7 +159,7 @@ export class MainLayout extends React.Component<Props, {}> {
                 </ul>
               </div>
               <div className="col-6 col-md">
-                <h5>메뉴명이들어갑니다</h5>
+                <h5>Converter</h5>
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
@@ -168,9 +168,18 @@ export class MainLayout extends React.Component<Props, {}> {
                 </ul>
               </div>
               <div className="col-6 col-md">
-                <h5>메뉴명이들어갑니다</h5>
+                <h5>Encoder/Decoder</h5>
                 <ul className="list-unstyled text-small">
+                  <li><a className="text-muted" href="/encode/unicode">Unicode</a></li>
+                  <li><a className="text-muted" href="/encode/url">Url</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
+                  <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
+                </ul>
+              </div>
+              <div className="col-6 col-md">
+                <h5>Etc</h5>
+                <ul className="list-unstyled text-small">
+                  <li><a className="text-muted" href="/replace">Html Tag Remover</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
                   <li><a className="text-muted" href="#">툴이름이들어갑니다</a></li>
