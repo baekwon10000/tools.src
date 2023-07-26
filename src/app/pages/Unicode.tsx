@@ -40,10 +40,20 @@ class Unicode extends React.Component<ComponentProps,{}> {
 
   setSampleData = () => {
     let sampleData = SAMPLE_DATA.unicode;
-    $("#inputArea").val(sampleData).trigger("updateStatusBar");
+    $("#inputArea").val(sampleData).trigger("keyup");
   }
 
   options = () => {}
+
+  onInputAreaKeyUp = (event) => {
+    $("#outputArea").val(escape(this.replaceAll($("#inputArea").val(), "\\", "%"))).trigger("updateStatusBar"); //.trigger("change");
+    $("#inputArea").trigger("updateStatusBar");
+  }
+
+  onOutputAreaKeyUp = (event) => {
+    $("#inputArea").val(unescape(this.replaceAll($("#outputArea").val(), "\\", "%"))).trigger("updateStatusBar"); //.trigger("change");
+    $("#outputArea").trigger("updateStatusBar");
+  }
 
   render() {
     const {type, action} = this.props;
@@ -54,9 +64,11 @@ class Unicode extends React.Component<ComponentProps,{}> {
           type={type}
           setSampleData={this.setSampleData}
           // action={this.action}
-          encode={this.encode}
-          decode={this.decode}
+          // encode={this.encode}
+          // decode={this.decode}
           // options={this.options}
+          onInputAreaKeyUp={this.onInputAreaKeyUp}
+          onOutputAreaKeyUp={this.onOutputAreaKeyUp}
         />
       </div>
     )

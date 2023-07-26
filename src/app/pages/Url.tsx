@@ -20,7 +20,7 @@ class Url extends React.Component<ComponentProps,{}> {
 
   setSampleData = () => {
     let sampleData = SAMPLE_DATA.url;
-    $("#inputArea").val(sampleData).trigger("updateStatusBar");
+    $("#inputArea").val(sampleData).trigger("keyup");
   }
 
   action = (event) => {}
@@ -29,6 +29,15 @@ class Url extends React.Component<ComponentProps,{}> {
   }
   decode = (event) => {
     $("#inputArea").val(decodeURIComponent($("#outputArea").val()));
+  }
+
+  onInputAreaKeyUp = (event) => {
+    $("#outputArea").val(encodeURIComponent($("#inputArea").val())).trigger("updateStatusBar");
+    $("#inputArea").trigger("updateStatusBar");
+  }
+  onOutputAreaKeyUp = (event) => {
+    $("#inputArea").val(decodeURIComponent($("#outputArea").val())).trigger("updateStatusBar");
+    $("#outputArea").trigger("updateStatusBar");
   }
 
   render() {
@@ -40,8 +49,10 @@ class Url extends React.Component<ComponentProps,{}> {
           type={type}
           setSampleData={this.setSampleData}
           // action={this.action}
-          encode={this.encode}
-          decode={this.decode}
+          // encode={this.encode}
+          // decode={this.decode}
+          onInputAreaKeyUp={this.onInputAreaKeyUp}
+          onOutputAreaKeyUp={this.onOutputAreaKeyUp}
         />
       </div>
     )

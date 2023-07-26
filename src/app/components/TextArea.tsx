@@ -18,7 +18,8 @@ interface TextAreaProps extends Props {
   encode: React.MouseEventHandler<HTMLButtonElement>;
   decode: React.MouseEventHandler<HTMLButtonElement>;
   options: Function;
-
+  onInputAreaKeyUp: React.MouseEventHandler<HTMLButtonElement>;
+  onOutputAreaKeyUp: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 class TextArea extends React.Component<TextAreaProps,{}> {
@@ -38,6 +39,8 @@ class TextArea extends React.Component<TextAreaProps,{}> {
     let self = this;
     this.$inputArea = $('#inputArea');
     this.$inputArea.on('keyup', (e) => {
+      if(this.props.onInputAreaKeyUp)
+        this.props.onInputAreaKeyUp(e);
       this.updateInputAreaStatusBar();
     });
     this.$inputArea.on('mouseup updateStatusBar', (e) => {
@@ -45,6 +48,8 @@ class TextArea extends React.Component<TextAreaProps,{}> {
     });
     this.$outputArea = $('#outputArea');
     this.$outputArea.on('keyup', (e) => {
+      if(this.props.onOutputAreaKeyUp)
+        this.props.onOutputAreaKeyUp(e);
       this.updateOutputAreaStatusBar();
     });
     this.$outputArea.on('mouseup updateStatusBar', (e) => {
@@ -79,8 +84,8 @@ class TextArea extends React.Component<TextAreaProps,{}> {
   cleanAll = (event) => {
     // this.inputArea.value = "";
     // this.outputArea.value = "";
-    this.$inputArea.val("").trigger("updateStatusBar");
-    this.$outputArea.val("").trigger("updateStatusBar");
+    this.$inputArea.val("").trigger("keyup");
+    this.$outputArea.val("").trigger("keyup");
   }
 
   // Input
@@ -101,7 +106,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
 
   cleanInputArea = (event) => {
     // this.inputArea.value = "";
-    this.$inputArea.val("").trigger("updateStatusBar");
+    this.$inputArea.val("").trigger("keyup");
   }
   
   // Output
@@ -121,7 +126,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
   }
   cleanOutputArea = (event) => {
     // this.outputArea.value = "";
-    this.$outputArea.val("").trigger("updateStatusBar");
+    this.$outputArea.val("").trigger("keyup");
   }
 
   options = (e) => {
