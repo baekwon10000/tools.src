@@ -1,7 +1,7 @@
 import React from "react"
 import {connect} from "react-redux";
 import {Props, ComponentProps} from "../types";
-import TextArea from "./TextArea";
+import TextArea from "../components/TextArea";
 
 declare let $; //, replaceAll;
 
