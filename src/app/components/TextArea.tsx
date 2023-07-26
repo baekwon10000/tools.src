@@ -93,7 +93,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
   copyTextInputArea = (event) => {
 
     this.inputArea.select();
-    this.inputArea.focus();
+    // this.inputArea.focus();
     document.execCommand("copy");
 
     // 말풍선 효과
@@ -114,7 +114,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
   copyTextOutputArea = (event) => {
 
     this.outputArea.select();
-    this.outputArea.focus();
+    // this.outputArea.focus();
     document.execCommand("copy");
 
     // 말풍선 효과

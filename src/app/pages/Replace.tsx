@@ -27,10 +27,11 @@ class Replace extends React.Component<ComponentProps, {}> {
     });
   }
 
-  setHtmlSampleData = (event) => {
+  setSampleData = (event) => {
     let sampleData = SAMPLE_DATA.html;
     $('#inputArea').val(sampleData);
-    $('#inputArea').focus();
+    // $('#inputArea').focus();
+    $('#inputArea').trigger('updateStatusBar');
   }
 
   replace = (event) => {
@@ -61,7 +62,7 @@ class Replace extends React.Component<ComponentProps, {}> {
         <TextArea
           ref={ref => this.textarea = ref}
           type={type}
-          setSampleData={this.setHtmlSampleData}
+          setSampleData={this.setSampleData}
           // action={this.replace}
           replace={this.replace}
         />
