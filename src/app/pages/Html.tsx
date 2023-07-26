@@ -1,11 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Props, ComponentProps} from "../types";
 import Editor from '../components/Editor'
 import utils from '../utils/utils';
 import {SAMPLE_DATA} from '../constants';
-import {Props, ComponentProps} from "../types";
 
-declare let beautifier, minify;
+declare let beautifier, minify, $;
 // let beautifier, minify;
 
 class Html extends React.Component<ComponentProps,{}> {
@@ -14,7 +14,7 @@ class Html extends React.Component<ComponentProps,{}> {
   editor: any = null;
 
   // Constants
-  HTML_BEAUTIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautifier.js';
+  HTML_BEAUTIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautifier.js';
   HTML_MINIFIER_URL = 'https://cdnjs.cloudflare.com/ajax/libs/html-minifier/0.8.1/htmlminifier.min.js';
 
   // Instants or Variables
@@ -321,7 +321,7 @@ class Html extends React.Component<ComponentProps,{}> {
       </div>
       <div className="col-md-6">
         <ul className="optionsList">
-        <li>
+          <li>
             <input type="checkbox" id="remove-ignored"/>
             <label htmlFor="remove-ignored">
               Remove ignored tags
