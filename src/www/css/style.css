@@ -154,7 +154,7 @@ footer p {margin-bottom:0;}
 ._404 section p {}
 
 /* Html Beautify Options */
-.html.beautify select, .html.beautify .buttons-box button {
+.beautify.html select, .beautify.html .buttons-box button {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -166,29 +166,29 @@ footer p {margin-bottom:0;}
   box-sizing: border-box;
 }
 
-.html.beautify select {
+.beautify.html select {
   display: block;
 }
 
-.html.beautify .options-checkboxes, .html.beautify .options-select {
+.beautify.html .options-checkboxes, .beautify.html .options-select {
   display: inline-table;
   max-width: 100%;
 }
 
-.html.beautify input[type="checkbox"] {margin-right:5px;}
+.beautify.html input[type="checkbox"] {margin-right:5px;}
 
 /* Html Minify Options */
-.html.minify .quiet { font-size: 0.85em; color: #888; }
-.html.minify .short { display: inline-block; width: 20em; margin-top: 0.25em; }
-.html.minify .unsafe { color: #f33; }
+.minify.html .quiet { font-size: 0.85em; color: #888; }
+.minify.html .short { display: inline-block; width: 20em; margin-top: 0.25em; }
+.minify.html .unsafe { color: #f33; }
 
-.html.minify #options ul {list-style:none;padding:0.5em;overflow:hidden;margin-top:0;}
-.html.minify #options ul li {float:left;clear:both;padding-bottom:0.5em;}
-.html.minify #options ul li div {margin-left:1.75em;}
-.html.minify #options label, .html.minify #options input {float:left;}
-.html.minify #options label {line-height:18px;}
-.html.minify #options label.sub-option {margin-left:22px;margin-right:5px}
-.html.minify #options input {margin:3px 8px 3px 4px;}
+.minify.html #options ul {list-style:none;padding:0.5em;overflow:hidden;margin-top:0;}
+.minify.html #options ul li {float:left;clear:both;padding-bottom:0.5em;}
+.minify.html #options ul li div {margin-left:1.75em;}
+.minify.html #options label, .minify.html #options input {float:left;}
+.minify.html #options label {line-height:18px;}
+.minify.html #options label.sub-option {margin-left:22px;margin-right:5px}
+.minify.html #options input {margin:3px 8px 3px 4px;}
 
 /* Replace */
 .replace form label {/* display:none; */width:80px;}

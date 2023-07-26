@@ -2,7 +2,9 @@ import React from "react"
 import {Props} from "../types"
 import {ACTOR_NAME} from "../constants"
 import Main from "../pages/Main"
-import Html from "../pages/Html"
+// import Html from "../pages/Html"
+import Beautify from "../pages/Beautify"
+import Minify from "../pages/Minify"
 import Json from "../pages/Json"
 import Replace from "../pages/Replace"
 import Url from "../pages/Url"
@@ -59,9 +61,9 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     } else if(action === 'replace') {
       component = (<Replace action={action} type={type}/>)
     } else if(action === 'beautify') {
-      component = (<Html  action={action} type={type}/>)
+      component = (<Beautify  action={action} type={type}/>)
     } else if(action === 'minify') {
-      component = (<Html  action={action} type={type}/>)
+      component = (<Minify  action={action} type={type}/>)
     } else if(type === 'verify') {
       component = (<Json action={action} type={type}/>)
     } else
