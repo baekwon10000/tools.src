@@ -143,7 +143,6 @@ a.copytext.active:after {
 }
 
 .textarea textarea {width:100%;height:100%;border:0;resize:none;padding:5px;font-size:14px;}
-.textarea form label {display:none;}
 
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
 footer .wrap {max-width:1024px;margin:0 auto;}
@@ -166,3 +165,18 @@ footer p {margin-bottom:0;}
 #options label {line-height:18px;}
 #options label.sub-option {margin-left:22px;margin-right:5px}
 #options input {margin:3px 8px 3px 4px;}
+
+/* Replace */
+.replace form label {/* display:none; */width:80px;}
+.replace form .form-control {display:inline-block;}
+.replace form .find .input-group {display:inline-flex;padding:0;width:400px;}
+.replace form button {background-color:white;}
+.replace form button.active {background-color:#e9ecef;}
+.replace form button.select {margin:-4px 0 0 5px;border:1px solid #ced4da;border-radius:0.25rem;}
+.replace form .btn:focus {box-shadow:none;}
+.replace form .replace input {width:400px;}
+
+@media (max-width: 768px) {
+  .replace form .find .input-group {width:calc(100% - 50px - 5px);}
+  .replace form .replace input {width:100%;}
+}

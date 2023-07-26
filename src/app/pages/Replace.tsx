@@ -17,7 +17,14 @@ class Replace extends React.Component<ComponentProps, {}> {
   }
 
   componentDidMount() {
+    $('form button')[2].classList.add('active');
     $('#inputFind').val('<[^>]*>?');
+    $('form button').click((e) => {
+      if(e.target.classList.contains('active'))
+        e.target.classList.remove('active');
+      else
+        e.target.classList.add('active');
+    });
   }
 
   setHtmlSampleData = (event) => {
@@ -27,11 +34,22 @@ class Replace extends React.Component<ComponentProps, {}> {
   }
 
   replace = (event) => {
+    let match_case = $('form button')[0].classList.contains('active');
+    let match_word = $('form button')[1].classList.contains('active');
+    let regular_expression = $('form button')[2].classList.contains('active');
+    let in_select = $('form button')[3].classList.contains('active');
+    // console.log(match_case);
+    // console.log(match_word);
+    // console.log(regular_expression);
+    // console.log(in_select);
+
     let find = $('#inputFind').val();
     let replace = $('#inputReplace').val();
     let input = $('#inputArea').val();
     // let output = $('#outputArea').val();
-    let result = input.replace(new RegExp(find, 'g'), replace);
+    let opt = 'g';
+    if(match_case) opt += 'i';
+    let result = input.replace(new RegExp(find, opt), replace);
     $('#outputArea').val(result);
   }
 
