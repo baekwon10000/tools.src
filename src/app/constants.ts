@@ -49,3 +49,44 @@ export const SAMPLE_DATA = {
   unicode: `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ`,
   url: `https://github.com/baekwon10000/tools.src`,
 }
+
+export const MENUS = [
+  {
+      title: 'Beautifier',
+      menus: [
+          {name: 'Html', link: '/beautify/html'},
+          // {name: 'Javascript', link: '/beautify/javascript'},
+          // {name: 'Css', link: '/beautify/css'}
+      ]
+  },
+  {
+      title: 'Minifier',
+      menus: [
+          {name: 'Html', link: '/minify/html'},
+      ]
+  },
+  {
+      title: 'Verifier',
+      menus: [
+          {name: 'Json', link: '/verify/json'},
+      ]
+  },
+  {
+      title: 'Converter',
+      menus: [
+      ]
+  },
+  {
+      title: 'Encoder/Decoder',
+      menus: [
+          {name: 'Unicode', link: '/encode/unicode'},
+          {name: 'Url', link: '/encode/url'},
+      ]
+  },
+  {
+      title: 'Etc',
+      menus: [
+          {name: 'Html Tag Remover', link: '/replace/html'},
+      ]
+  },
+]

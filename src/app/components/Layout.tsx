@@ -5,6 +5,7 @@ import Icon from "./Icon"
 import ICONS from "../utils/icons"
 import Main from "../pages/Main"
 import { Props } from "../types"
+import { MENUS } from "../constants"
 
 // interface LayoutProps extends Props {}
 
@@ -52,7 +53,25 @@ export class MainLayout extends React.Component<Props, {}> {
               </button>
               <div className="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul className="navbar-nav mr-auto">
-                  <li className="nav-item dropdown">
+                  {
+                    MENUS.map((item, index) => {
+                      return (
+                        <li key={index} className="nav-item dropdown">
+                          <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a>
+                          <div className="dropdown-menu" aria-labelledby="dropdown01">
+                            {
+                              item.menus.map((item, index) => {
+                                return (
+                                  <a key={index} className="dropdown-item" href={item.link}>{item.name}</a>
+                                )
+                              })
+                            }
+                          </div>
+                        </li>
+                      );
+                    })
+                  }
+                  {/* <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beautifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown01">
                       <a className="dropdown-item" href="/beautify/html">Html</a>
@@ -99,7 +118,7 @@ export class MainLayout extends React.Component<Props, {}> {
                       <a className="dropdown-item" href="#">-</a>
                       <a className="dropdown-item" href="#">-</a>
                     </div>
-                  </li>
+                  </li> */}
                 </ul>
                 <ul className="contacts">
                   <li>
@@ -130,7 +149,25 @@ export class MainLayout extends React.Component<Props, {}> {
           
           <footer className="container-fluid py-3">
             <div className="row">
-              <div className="col-6 col-md">
+              {
+                MENUS.map((item, index) => {
+                  return (
+                    <div key={index} className="col-6 col-md">
+                      <h5>{item.title}</h5>
+                      <ul className="list-unstyled text-small">
+                        {
+                          item.menus.map((item, index) => {
+                            return (
+                              <li key={index}><a className="text-muted" href={item.link}>{item.name}</a></li>
+                            )
+                          })
+                        }
+                      </ul>
+                    </div>
+                  )
+                })
+              }
+              {/* <div className="col-6 col-md">
                 <h5>Beautifier</h5>
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="/beautify/html">Html</a></li>
@@ -183,7 +220,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li><a className="text-muted" href="#">-</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </footer>
           <footer>
