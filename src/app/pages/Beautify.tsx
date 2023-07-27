@@ -5,7 +5,7 @@ import Editor from '../components/Editor'
 import utils from '../utils/utils';
 import {SAMPLE_DATA} from '../constants';
 
-declare let beautifier, minify, $;
+declare let beautifier, minify, $, Cookies;
 // let beautifier, minify;
 
 class Beautify extends React.Component<ComponentProps,{}> {
@@ -24,6 +24,35 @@ class Beautify extends React.Component<ComponentProps,{}> {
     this.state = {}
   }
   
+  componentDidMount() {
+    this.read_settings_from_cookie();
+  }
+
+  any(a, b) {
+    return a || b;
+  }
+
+  read_settings_from_cookie() {
+    $('#tabsize').val(this.any(Cookies.get('tabsize'), '4'));
+    $('#brace-style').val(this.any(Cookies.get('brace-style'), 'collapse'));
+    $('#detect-packers').prop('checked', Cookies.get('detect-packers') !== 'off');
+    $('#max-preserve-newlines').val(this.any(Cookies.get('max-preserve-newlines'), '5'));
+    $('#keep-array-indentation').prop('checked', Cookies.get('keep-array-indentation') === 'on');
+    $('#break-chained-methods').prop('checked', Cookies.get('break-chained-methods') === 'on');
+    $('#indent-scripts').val(this.any(Cookies.get('indent-scripts'), 'normal'));
+    $('#additional-options').val(this.any(Cookies.get('additional-options'), '{}'));
+    $('#space-before-conditional').prop('checked', Cookies.get('space-before-conditional') !== 'off');
+    $('#wrap-line-length').val(this.any(Cookies.get('wrap-line-length'), '0'));
+    $('#unescape-strings').prop('checked', Cookies.get('unescape-strings') === 'on');
+    $('#jslint-happy').prop('checked', Cookies.get('jslint-happy') === 'on');
+    $('#end-with-newline').prop('checked', Cookies.get('end-with-newline') === 'on');
+    $('#indent-inner-html').prop('checked', Cookies.get('indent-inner-html') === 'on');
+    $('#comma-first').prop('checked', Cookies.get('comma-first') === 'on');
+    $('#e4x').prop('checked', Cookies.get('e4x') === 'on');
+    $('#language').val(this.any(Cookies.get('language'), 'js'));
+    $('#indent-empty-lines').prop('checked', Cookies.get('indent-empty-lines') === 'on');
+  }
+
   setHtmlSampleData = (event) => {
     let sampleData = SAMPLE_DATA.html;
     this.editor.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
@@ -126,8 +155,33 @@ class Beautify extends React.Component<ComponentProps,{}> {
     </div>
   )
 
+  store_settings_to_cookie() {
+    var opts = {
+      expires: 360
+    };
+    Cookies.set('tabsize', $('#tabsize').val(), opts);
+    Cookies.set('brace-style', $('#brace-style').val(), opts);
+    Cookies.set('detect-packers', $('#detect-packers').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('max-preserve-newlines', $('#max-preserve-newlines').val(), opts);
+    Cookies.set('keep-array-indentation', $('#keep-array-indentation').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('break-chained-methods', $('#break-chained-methods').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('space-before-conditional', $('#space-before-conditional').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('unescape-strings', $('#unescape-strings').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('jslint-happy', $('#jslint-happy').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('end-with-newline', $('#end-with-newline').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('wrap-line-length', $('#wrap-line-length').val(), opts);
+    Cookies.set('indent-scripts', $('#indent-scripts').val(), opts);
+    Cookies.set('additional-options', $('#additional-options').val(), opts);
+    Cookies.set('indent-inner-html', $('#indent-inner-html').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('comma-first', $('#comma-first').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('e4x', $('#e4x').prop('checked') ? 'on' : 'off', opts);
+    Cookies.set('language', $('#language').val(), opts);
+    Cookies.set('indent-empty-lines', $('#indent-empty-lines').prop('checked') ? 'on' : 'off', opts);
+  }
+
   beautifyHtml = (event) => {
     let self = this;
+    this.store_settings_to_cookie();
     utils.loadScript(this.HTML_BEAUTIFIER_URL, function() {
       let opts = {
         indent_size: '4',
