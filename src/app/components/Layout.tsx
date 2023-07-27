@@ -95,7 +95,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Etc</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
-                      <a className="dropdown-item" href="/replace">Html Tag Remover</a>
+                      <a className="dropdown-item" href="/replace/html">Html Tag Remover</a>
                       <a className="dropdown-item" href="#">-</a>
                       <a className="dropdown-item" href="#">-</a>
                     </div>
@@ -133,7 +133,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="col-6 col-md">
                 <h5>Beautifier</h5>
                 <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/html">Html</a></li>
+                  <li><a className="text-muted" href="/beautify/html">Html</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
@@ -142,7 +142,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="col-6 col-md">
                 <h5>Minifier</h5>
                 <ul className="list-unstyled text-small">
-                <li><a className="text-muted" href="/html">Html</a></li>
+                <li><a className="text-muted" href="/minify/html">Html</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
@@ -151,7 +151,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="col-6 col-md">
                 <h5>Verifier</h5>
                 <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/json">Json</a></li>
+                  <li><a className="text-muted" href="/verify/json">Json</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
                   <li><a className="text-muted" href="#">-</a></li>
                   <li><a className="text-muted" href="#">-</a></li>

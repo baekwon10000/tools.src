@@ -42,7 +42,7 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     let action = first, type = second;
     let title, actor = ACTOR_NAME[action];
 
-    if(action === 'beautify' || first === 'minify') {
+    if(action === 'beautify' || action === 'minify' || action === 'verify') {
       title = type.substring(0,1).toUpperCase()+type.substring(1) + ' ' + actor.substring(0,1).toUpperCase()+actor.substring(1);
     } else if(action === 'replace') {
       title = 'Html Tag Remover';
@@ -64,7 +64,7 @@ class Wrapper extends React.Component<WrapperProps,{}> {
       component = (<Beautify  action={action} type={type}/>)
     } else if(action === 'minify') {
       component = (<Minify  action={action} type={type}/>)
-    } else if(type === 'verify') {
+    } else if(action === 'verify') {
       component = (<Json action={action} type={type}/>)
     } else
       component = (<Main/>)
