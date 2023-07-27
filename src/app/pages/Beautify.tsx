@@ -184,8 +184,8 @@ class Beautify extends React.Component<ComponentProps,{}> {
     this.store_settings_to_cookie();
     utils.loadScript(this.HTML_BEAUTIFIER_URL, function() {
       let opts = {
-        indent_size: '4',
-        indent_char: ' ',
+        indent_size: '',
+        indent_char: '',
         max_preserve_newlines: '',
         preserve_newlines: false,
         keep_array_indentation: '',
