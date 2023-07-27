@@ -46,6 +46,30 @@ export const SAMPLE_DATA = {
       ]
   }
 }`,
+  javascript: `function startTime() {var today = new Date();
+var h = today.getHours();
+var m = today.getMinutes();
+var s = today.getSeconds();
+m = checkTime(m);
+s = checkTime(s);
+document.getElementById('txt').innerHTML =
+h + ":" + m + ":" + s;
+var t = setTimeout(startTime, 500);}
+
+function checkTime(i) {
+// add zero in front of numbers < 10
+if (i < 10) {i = "0" + i;}
+    return i;
+}`,
+  css: `.menu_simple {
+width: 100%;background-color: #005555;}
+.menu_simple ul {margin: 0;padding: 0;float: left;}
+.menu_simple ul li {
+display: inline;
+}
+.menu_simple ul li a {float: left;text-decoration: none;color: white;padding: 10.5px 11px;background-color: #005555;}
+.menu_simple ul li a:visited {color: white;}
+.menu_simple ul li a:hover, .menu_simple ul li .current {color: white;background-color: #5FD367;}`,
   unicode: `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ`,
   url: `https://github.com/baekwon10000/tools.src`,
 }
@@ -55,8 +79,8 @@ export const MENUS = [
       title: 'Beautifier',
       menus: [
           {name: 'Html', link: '/beautify/html'},
-          // {name: 'Javascript', link: '/beautify/javascript'},
-          // {name: 'Css', link: '/beautify/css'}
+          {name: 'Javascript', link: '/beautify/javascript'},
+          {name: 'Css', link: '/beautify/css'}
       ]
   },
   {

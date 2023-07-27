@@ -33,7 +33,7 @@ const Root = () => (
       <Route path="/" component={MainLayout}>
         {
           [
-            'beautify/html',
+            'beautify/html', 'beautify/javascript', 'beautify/css',
             'minify/html',
             'verify/json',
             'replace/html',

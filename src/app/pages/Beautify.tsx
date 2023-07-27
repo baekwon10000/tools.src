@@ -53,8 +53,15 @@ class Beautify extends React.Component<ComponentProps,{}> {
     $('#indent-empty-lines').prop('checked', Cookies.get('indent-empty-lines') === 'on');
   }
 
-  setHtmlSampleData = (event) => {
-    let sampleData = SAMPLE_DATA.html;
+  setSampleData = (event) => {
+    const {type} = this.props;
+    let sampleData;
+    if(type === 'javascript')
+      sampleData = SAMPLE_DATA.javascript
+    else if(type === 'css')
+      sampleData = SAMPLE_DATA.css
+    else // if(type === 'html')
+      sampleData = SAMPLE_DATA.html
     this.editor.getWrappedInstance().inputACEEditor.setValue(sampleData, 1);
   }
 
@@ -179,7 +186,7 @@ class Beautify extends React.Component<ComponentProps,{}> {
     Cookies.set('indent-empty-lines', $('#indent-empty-lines').prop('checked') ? 'on' : 'off', opts);
   }
 
-  beautifyHtml = (event) => {
+  beautify = (event) => {
     let self = this;
     this.store_settings_to_cookie();
     utils.loadScript(this.HTML_BEAUTIFIER_URL, function() {
@@ -222,7 +229,13 @@ class Beautify extends React.Component<ComponentProps,{}> {
       opts.indent_empty_lines = $('#indent-empty-lines').prop('checked');
 
       let inputEditor = self.editor.getWrappedInstance().inputACEEditor;
-      let output = beautifier.html(inputEditor.getValue(), opts);
+      let output;
+      if(self.props.type === 'javascript')
+        output = beautifier.js(inputEditor.getValue(), opts);
+      else if(self.props.type === 'css')
+        output = beautifier.css(inputEditor.getValue(), opts);
+      else // if(self.props.type === 'html')
+        output = beautifier.html(inputEditor.getValue(), opts);
       let outputEditor = self.editor.getWrappedInstance().outputACEEditor;
       outputEditor.setValue(output, 1);
     });
@@ -233,9 +246,9 @@ class Beautify extends React.Component<ComponentProps,{}> {
     const {type, action} = this.props;
     let inputEditorMode, outputEditorMode, beautify, minify, options;
 
-    inputEditorMode = 'html';
-    outputEditorMode = 'html';
-    beautify = this.beautifyHtml;
+    inputEditorMode = type;
+    outputEditorMode = type;
+    beautify = this.beautify;
     options = this.beautifyOptions;
     minify = null;
 
@@ -246,7 +259,7 @@ class Beautify extends React.Component<ComponentProps,{}> {
           type={type}
           inputEditorMode={inputEditorMode}
           outputEditorMode={outputEditorMode}
-          setSampleData={this.setHtmlSampleData}
+          setSampleData={this.setSampleData}
           beautify={beautify}
           minify={minify}
           // verify={this.verifyHtml}

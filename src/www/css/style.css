@@ -154,7 +154,7 @@ footer p {margin-bottom:0;}
 ._404 section p {}
 
 /* Html Beautify Options */
-.beautify.html select, .beautify.html .buttons-box button {
+.beautify select, .beautify .buttons-box button {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -166,16 +166,16 @@ footer p {margin-bottom:0;}
   box-sizing: border-box;
 }
 
-.beautify.html select {
+.beautify select {
   display: block;
 }
 
-.beautify.html .options-checkboxes, .beautify.html .options-select {
+.beautify .options-checkboxes, .beautify .options-select {
   display: inline-table;
   max-width: 100%;
 }
 
-.beautify.html input[type="checkbox"] {margin-right:5px;}
+.beautify input[type="checkbox"] {margin-right:5px;}
 
 /* Html Minify Options */
 .minify.html .quiet { font-size: 0.85em; color: #888; }
