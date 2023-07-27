@@ -24,6 +24,7 @@ class Editor extends React.Component<EditorProps,{}> {
 
   ace_common_options = {
     showPrintMargin: false,
+    showInvisibles: true,
     // enableBasicAutocompletion: true,
     // enableSnippets: true,
     // enableLiveAutocompletion: true
