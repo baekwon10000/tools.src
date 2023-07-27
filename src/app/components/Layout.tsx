@@ -40,7 +40,6 @@ export class MainLayout extends React.Component<Props, {}> {
 
     return (
       <Layout className="layout">
-
           <header>
             <nav className="navbar navbar-expand-md navbar-light bg-light rounded fixed-top">
               <a className="navbar-brand" href="/" title="Tools">
@@ -54,7 +53,7 @@ export class MainLayout extends React.Component<Props, {}> {
               <div className="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul className="navbar-nav mr-auto">
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="/html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beautifier</a>
+                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beautifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown01">
                       <a className="dropdown-item" href="/beautify/html">Html</a>
                       <a className="dropdown-item" href="#">-</a>
@@ -62,7 +61,7 @@ export class MainLayout extends React.Component<Props, {}> {
                     </div>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="/html" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minifier</a>
+                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown02">
                       <a className="dropdown-item" href="/minify/html">Html</a>
                       <a className="dropdown-item" href="#">-</a>
@@ -70,7 +69,7 @@ export class MainLayout extends React.Component<Props, {}> {
                     </div>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="/json" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verifier</a>
+                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown03">
                       <a className="dropdown-item" href="/verify/json">Json</a>
                       <a className="dropdown-item" href="#">-</a>
@@ -78,7 +77,7 @@ export class MainLayout extends React.Component<Props, {}> {
                     </div>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Converter</a>
+                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Converter</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
                       <a className="dropdown-item" href="#">-</a>
                       <a className="dropdown-item" href="#">-</a>
@@ -86,7 +85,7 @@ export class MainLayout extends React.Component<Props, {}> {
                     </div>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Encoder/Decoder</a>
+                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Encoder/Decoder</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
                       <a className="dropdown-item" href="/encode/unicode">Unicode</a>
                       <a className="dropdown-item" href="/encode/url">Url</a>
