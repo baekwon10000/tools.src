@@ -17,9 +17,9 @@ class Replace extends React.Component<ComponentProps, {}> {
   }
 
   componentDidMount() {
-    $('form button')[2].classList.add('active');
+    $('.form button')[2].classList.add('active');
     $('#inputFind').val('<[^>]*>?');
-    $('form button').click((e) => {
+    $('.form button').click((e) => {
       if(e.target.classList.contains('active'))
         e.target.classList.remove('active');
       else
@@ -35,10 +35,10 @@ class Replace extends React.Component<ComponentProps, {}> {
   }
 
   replace = (event) => {
-    let match_case = $('form button')[0].classList.contains('active');
-    let match_word = $('form button')[1].classList.contains('active');
-    let regular_expression = $('form button')[2].classList.contains('active');
-    let in_select = $('form button')[3].classList.contains('active');
+    let match_case = $('.form button')[0].classList.contains('active');
+    let match_word = $('.form button')[1].classList.contains('active');
+    let regular_expression = $('.form button')[2].classList.contains('active');
+    let in_select = $('.form button')[3].classList.contains('active');
     // console.log(match_case);
     // console.log(match_word);
     // console.log(regular_expression);

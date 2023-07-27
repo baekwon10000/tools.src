@@ -191,16 +191,16 @@ footer p {margin-bottom:0;}
 .minify.html #options input {margin:3px 8px 3px 4px;}
 
 /* Replace */
-.replace form label {/* display:none; */width:80px;}
-.replace form .form-control {display:inline-block;}
-.replace form .find .input-group {display:inline-flex;padding:0;width:400px;}
-.replace form button {background-color:white;}
-.replace form button.active {background-color:#e9ecef;}
-.replace form button.select {margin:-4px 0 0 5px;border:1px solid #ced4da;border-radius:0.25rem;}
-.replace form .btn:focus {box-shadow:none;}
-.replace form .replace input {width:400px;}
+.replace .form label {/* display:none; */width:80px;}
+.replace .form .form-control {display:inline-block;}
+.replace .form .find .input-group {display:inline-flex;padding:0;width:400px;}
+.replace .form button {background-color:white;}
+.replace .form button.active {background-color:#e9ecef;}
+.replace .form button.select {margin:-4px 0 0 5px;border:1px solid #ced4da;border-radius:0.25rem;}
+.replace .form .btn:focus {box-shadow:none;}
+.replace .form .replace input {width:400px;}
 
 @media (max-width: 768px) {
-  .replace form .find .input-group {width:calc(100% - 50px - 5px);}
-  .replace form .replace input {width:100%;}
+  .replace .form .find .input-group {width:calc(100% - 50px - 5px);}
+  .replace .form .replace input {width:100%;}
 }
