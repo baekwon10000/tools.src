@@ -4,6 +4,7 @@ export const ACTOR_NAME = {
   'verify': 'verifier',
   'encode': 'encoder',
   'decode': 'decoder',
+  'convert': 'converter',
 }
 
 export const SAMPLE_DATA = {
@@ -98,6 +99,7 @@ export const MENUS = [
   {
       title: 'Converter',
       menus: [
+        {name: 'Color', link: '/convert/color'},
       ]
   },
   {

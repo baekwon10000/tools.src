@@ -9,6 +9,7 @@ import Json from "../pages/Json"
 import Replace from "../pages/Replace"
 import Url from "../pages/Url"
 import Unicode from "../pages/Unicode"
+import Color from "../pages/Color"
 
 interface WrapperProps extends Props {}
 
@@ -42,7 +43,7 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     let action = first, type = second;
     let title, actor = ACTOR_NAME[action];
 
-    if(action === 'beautify' || action === 'minify' || action === 'verify') {
+    if(action === 'beautify' || action === 'minify' || action === 'verify' || action === 'convert') {
       title = type.substring(0,1).toUpperCase()+type.substring(1) + ' ' + actor.substring(0,1).toUpperCase()+actor.substring(1);
     } else if(action === 'replace') {
       title = 'Html Tag Remover';
@@ -66,6 +67,8 @@ class Wrapper extends React.Component<WrapperProps,{}> {
       component = (<Minify  action={action} type={type}/>)
     } else if(action === 'verify') {
       component = (<Json action={action} type={type}/>)
+    } else if(action === 'convert') {
+      component = (<Color action={action} type={type}/>)
     } else
       component = (<Main/>)
     
