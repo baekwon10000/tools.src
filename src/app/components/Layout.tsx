@@ -225,7 +225,7 @@ export class MainLayout extends React.Component<Props, {}> {
           </footer>
           <footer>
             <div className="wrap">
-              <p>© 2023 by KimJinkyu. All right reserved.</p>
+              <p>© 2023 by 김진규. All right reserved.</p>
             </div>
           </footer>
       </Layout>
