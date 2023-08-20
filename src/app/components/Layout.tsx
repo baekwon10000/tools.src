@@ -75,32 +75,32 @@ export class MainLayout extends React.Component<Props, {}> {
                     <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beautifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown01">
                       <a className="dropdown-item" href="/beautify/html">Html</a>
-                      <a className="dropdown-item" href="#">-</a>
-                      <a className="dropdown-item" href="#">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
                     </div>
                   </li>
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown02">
                       <a className="dropdown-item" href="/minify/html">Html</a>
-                      <a className="dropdown-item" href="#">-</a>
-                      <a className="dropdown-item" href="#">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
                     </div>
                   </li>
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verifier</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown03">
                       <a className="dropdown-item" href="/verify/json">Json</a>
-                      <a className="dropdown-item" href="#">-</a>
-                      <a className="dropdown-item" href="#">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
                     </div>
                   </li>
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Converter</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
-                      <a className="dropdown-item" href="#">-</a>
-                      <a className="dropdown-item" href="#">-</a>
-                      <a className="dropdown-item" href="#">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
                     </div>
                   </li>
                   <li className="nav-item dropdown">
@@ -108,21 +108,21 @@ export class MainLayout extends React.Component<Props, {}> {
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
                       <a className="dropdown-item" href="/encode/unicode">Unicode</a>
                       <a className="dropdown-item" href="/encode/url">Url</a>
-                      <a className="dropdown-item" href="#">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
                     </div>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Etc</a>
+                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Etc</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
                       <a className="dropdown-item" href="/replace/html">Html Tag Remover</a>
-                      <a className="dropdown-item" href="#">-</a>
-                      <a className="dropdown-item" href="#">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
+                      <a className="dropdown-item" href="#nolink">-</a>
                     </div>
                   </li> */}
                 </ul>
                 <ul className="contacts">
                   <li>
-                    <a className="" href="#" title="Buy a coffee">
+                    <a className="" href="#nolink" title="Buy a coffee">
                       <span className="material-symbols-outlined">
                         local_cafe
                       </span>
@@ -171,36 +171,36 @@ export class MainLayout extends React.Component<Props, {}> {
                 <h5>Beautifier</h5>
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="/beautify/html">Html</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
                 </ul>
               </div>
               <div className="col-6 col-md">
                 <h5>Minifier</h5>
                 <ul className="list-unstyled text-small">
                 <li><a className="text-muted" href="/minify/html">Html</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
                 </ul>
               </div>
               <div className="col-6 col-md">
                 <h5>Verifier</h5>
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="/verify/json">Json</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
                 </ul>
               </div>
               <div className="col-6 col-md">
                 <h5>Converter</h5>
                 <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
                 </ul>
               </div>
               <div className="col-6 col-md">
@@ -208,17 +208,17 @@ export class MainLayout extends React.Component<Props, {}> {
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="/encode/unicode">Unicode</a></li>
                   <li><a className="text-muted" href="/encode/url">Url</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
                 </ul>
               </div>
               <div className="col-6 col-md">
                 <h5>Etc</h5>
                 <ul className="list-unstyled text-small">
                   <li><a className="text-muted" href="/replace">Html Tag Remover</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
-                  <li><a className="text-muted" href="#">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
+                  <li><a className="text-muted" href="#nolink">-</a></li>
                 </ul>
               </div> */}
             </div>

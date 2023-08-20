@@ -222,21 +222,21 @@ class Editor extends React.Component<EditorProps,{}> {
                   <i>Input</i>
                 </label>
                 <div className="editortoolbar btn-group-sm">
-                  <a href="#" id="inputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextInputEditor}>
+                  <a href="#nolink" id="inputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextInputEditor}>
                     <svg className="svgicon">
                       <use href="#copy"></use>
                     </svg>
                   </a>
-                  {/* <a href="#" className="icon" title="Select All" onClick={this.selectInputEditor}>
+                  {/* <a href="#nolink" className="icon" title="Select All" onClick={this.selectInputEditor}>
                     <span className="material-symbols-outlined">select_all</span>
                   </a> */}
-                  <a href="#" className="icon" title="Clear" onClick={this.cleanInputEditor}>
+                  <a href="#nolink" className="icon" title="Clear" onClick={this.cleanInputEditor}>
                     <svg className="svgicon">
                       <use href="#trash"></use>
                     </svg>
                   </a>
                 </div>
-                <a href="#" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.type.toUpperCase()} Data`} onClick={this.props.setSampleData}>
+                <a href="#nolink" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.type.toUpperCase()} Data`} onClick={this.props.setSampleData}>
                   <i>Sample</i>
                 </a>
               </div>
@@ -245,12 +245,12 @@ class Editor extends React.Component<EditorProps,{}> {
                 <span className="column p-0 pl-1" id="inputAceLineColumn">Ln: 1 Col: 0</span>
                 <span className="column p-0 has-text-centered" id="inputTextSize">Size: 0</span>
                 {/* <span className="column p-0 is-hidden-mobile" id="inputFontSize">
-                  <a href="#" id="inputFontSizeI" title="Increase Text Size" className="icon is-pulled-right">
+                  <a href="#nolink" id="inputFontSizeI" title="Increase Text Size" className="icon is-pulled-right">
                     <svg className="svgicon">
                       <use href="#title"></use>
                     </svg>
                   </a>
-                  <a href="#" id="inputFontSizeD" title="Decrease Text Size" className="icon is-pulled-right">
+                  <a href="#nolink" id="inputFontSizeD" title="Decrease Text Size" className="icon is-pulled-right">
                     <svg className="svgicon16">
                       <use href="#title"></use>
                     </svg>
@@ -266,15 +266,15 @@ class Editor extends React.Component<EditorProps,{}> {
                   <i>Output</i>
                 </label>
                 <div id="outputToolBar" className="editortoolbar btn-group-sm">
-                  <a href="#" id="outputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextOutputEditor}>
+                  <a href="#nolink" id="outputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextOutputEditor}>
                     <svg className="svgicon">
                       <use href="#copy"></use>
                     </svg>
                   </a>
-                  {/* <a href="#" className="icon" title="Select All" onClick={this.selectOutputEditor}>
+                  {/* <a href="#nolink" className="icon" title="Select All" onClick={this.selectOutputEditor}>
                     <span className="material-symbols-outlined">select_all</span>
                   </a> */}
-                  <a href="#" className="icon" title="Clear" onClick={this.cleanOutputEditor}>
+                  <a href="#nolink" className="icon" title="Clear" onClick={this.cleanOutputEditor}>
                     <svg className="svgicon">
                       <use href="#trash"></use>
                     </svg>
@@ -286,12 +286,12 @@ class Editor extends React.Component<EditorProps,{}> {
                 <span className="column p-0 pl-1" id="outputAceLineColumn">Ln: 1 Col: 0</span>
                 <span className="column p-0 has-text-centered" id="outputTextSize">Size: 0</span>
                 {/* <span className="column p-0 is-hidden-mobile" id="outputFontSize">
-                  <a href="#" id="outputFontSizeI" title="Increase Text Size" className="icon is-pulled-right">
+                  <a href="#nolink" id="outputFontSizeI" title="Increase Text Size" className="icon is-pulled-right">
                     <svg className="svgicon">
                       <use href="#title"></use>
                     </svg>
                   </a>
-                  <a href="#" id="outputFontSizeD" title="Decrease Text Size" className="icon is-pulled-right">
+                  <a href="#nolink" id="outputFontSizeD" title="Decrease Text Size" className="icon is-pulled-right">
                     <svg className="svgicon16">
                       <use href="#title"></use>
                     </svg>

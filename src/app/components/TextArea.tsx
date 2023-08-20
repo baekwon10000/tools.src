@@ -208,15 +208,15 @@ class TextArea extends React.Component<TextAreaProps,{}> {
                   <i>{leftPanelName}</i>
                 </label>
                 <div className="editortoolbar btn-group-sm">
-                  <a href="#" id="inputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextInputArea}>
+                  <a href="#nolink" id="inputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextInputArea}>
                     <svg className="svgicon">
                       <use href="#copy"></use>
                     </svg>
                   </a>
-                  {/* <a href="#" className="icon" title="Select All" onClick={this.selectInputArea}>
+                  {/* <a href="#nolink" className="icon" title="Select All" onClick={this.selectInputArea}>
                     <span className="material-symbols-outlined">select_all</span>
                   </a> */}
-                  <a href="#" className="icon" title="Clear" onClick={this.cleanInputArea}>
+                  <a href="#nolink" className="icon" title="Clear" onClick={this.cleanInputArea}>
                     <svg className="svgicon">
                       <use href="#trash"></use>
                     </svg>
@@ -224,7 +224,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
                 </div>
                 {
                   this.props.setSampleData ?
-                    <a href="#" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.type.toUpperCase()} Data`} onClick={this.props.setSampleData}>
+                    <a href="#nolink" className="icon" style={{marginRight:'25px',float:'right'}} title={`Sample ${this.props.type.toUpperCase()} Data`} onClick={this.props.setSampleData}>
                       <i>Sample</i>
                     </a>
                     : null
@@ -247,15 +247,15 @@ class TextArea extends React.Component<TextAreaProps,{}> {
                   <i>{rightPanelName}</i>
                 </label>
                 <div id="outputToolBar" className="editortoolbar btn-group-sm">
-                  <a href="#" id="outputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextOutputArea}>
+                  <a href="#nolink" id="outputcopy" className="icon copytext" title="Copy to Clipboard" onClick={this.copyTextOutputArea}>
                     <svg className="svgicon">
                       <use href="#copy"></use>
                     </svg>
                   </a>
-                  {/* <a href="#" className="icon" title="Select All" onClick={this.selectOutputArea}>
+                  {/* <a href="#nolink" className="icon" title="Select All" onClick={this.selectOutputArea}>
                     <span className="material-symbols-outlined">select_all</span>
                   </a> */}
-                  <a href="#" className="icon" title="Clear" onClick={this.cleanOutputArea}>
+                  <a href="#nolink" className="icon" title="Clear" onClick={this.cleanOutputArea}>
                     <svg className="svgicon">
                       <use href="#trash"></use>
                     </svg>
