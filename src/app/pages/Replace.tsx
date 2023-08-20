@@ -49,7 +49,7 @@ class Replace extends React.Component<ComponentProps, {}> {
     let input = $('#inputArea').val();
     // let output = $('#outputArea').val();
     let opt = 'g';
-    if(match_case) opt += 'i';
+    if(!match_case) opt += 'i';
     let result = input.replace(new RegExp(find, opt), replace);
     $('#outputArea').val(result);
   }
