@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Editor from '../components/Editor'
-import utils from "../utils/_utils";
-import {Props, ComponentProps} from "../_types";
-import {SAMPLE_DATA} from "../_constants";
+import utils from "../utils/Utils";
+import {Props, ComponentProps} from "../Types";
+import {SAMPLE_DATA} from "../Constants";
 
 // let jsonlint, $;
 declare let jsonlint, $;

@@ -1,6 +1,6 @@
 import React from "react"
 import {connect} from 'react-redux';
-import {Props, ComponentProps} from "../_types";
+import {Props, ComponentProps} from "../Types";
 
 class Sample extends React.Component<ComponentProps,{}> {
 

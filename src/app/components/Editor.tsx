@@ -1,6 +1,6 @@
 import React from "react"
 import {connect} from "react-redux";
-import {Props} from "../_types";
+import {Props} from "../Types";
 
 // let ace, $;
 declare let ace, $;

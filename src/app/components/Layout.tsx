@@ -2,10 +2,10 @@ import React, {} from "react"
 import {Link} from "react-router";
 import "../../www/css/style.css"
 import Icon from "./Icon"
-import ICONS from "../utils/_icons"
+import ICONS from "../utils/Icons"
 import Main from "../pages/Main"
-import { Props } from "../_types"
-import { MENUS } from "../_constants"
+import { Props } from "../Types"
+import { MENUS } from "../Constants"
 
 // interface LayoutProps extends Props {}
 
