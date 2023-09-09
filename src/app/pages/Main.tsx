@@ -1,5 +1,5 @@
 import React, {} from "react"
-import {Props} from "../types"
+import {Props} from "../_types"
 
 class Main extends React.Component<Props, {}> {
 

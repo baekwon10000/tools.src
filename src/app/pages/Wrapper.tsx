@@ -1,6 +1,6 @@
 import React from "react"
-import {Props} from "../types"
-import {ACTOR_NAME} from "../constants"
+import {Props} from "../_types"
+import {ACTOR_NAME} from "../_constants"
 import Main from "../pages/Main"
 // import Html from "../pages/Html"
 import Beautify from "../pages/Beautify"

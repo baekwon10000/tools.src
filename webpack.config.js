@@ -10,7 +10,7 @@ const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 
 const common = merge([
   {
-    entry: path.resolve(__dirname, "/src/app/app.tsx"),
+    entry: path.resolve(__dirname, "/src/app/_app.tsx"),
     mode: process.env.NODE_ENV, // development, production
     output: {
       publicPath: "/",

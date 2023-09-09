@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Props, ComponentProps} from "../types";
+import {Props, ComponentProps} from "../_types";
 import Editor from '../components/Editor'
-import utils from '../utils/utils';
-import {SAMPLE_DATA} from '../constants';
+import utils from '../utils/_utils';
+import {SAMPLE_DATA} from '../_constants';
 
 declare let beautifier, minify, $, Cookies;
 // let beautifier, minify;

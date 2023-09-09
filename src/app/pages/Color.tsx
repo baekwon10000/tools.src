@@ -1,5 +1,5 @@
 import React from "react"
-import {Props, ComponentProps} from "../types";
+import {Props, ComponentProps} from "../_types";
 import "../../www/css/w3schools30.css"
 import {w3color} from "./w3color.js"
 

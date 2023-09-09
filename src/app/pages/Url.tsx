@@ -1,8 +1,8 @@
 import React from "react"
 import {connect} from 'react-redux';
-import {Props, ComponentProps} from "../types";
+import {Props, ComponentProps} from "../_types";
 import TextArea from "../components/TextArea";
-import {SAMPLE_DATA} from '../constants';
+import {SAMPLE_DATA} from '../_constants';
 
 declare let $;
 

@@ -1,7 +1,7 @@
 import React from "react"
 import {connect} from 'react-redux';
-import {Props, ComponentProps} from "../types";
-import {SAMPLE_DATA} from "../constants";
+import {Props, ComponentProps} from "../_types";
+import {SAMPLE_DATA} from "../_constants";
 import TextArea from '../components/TextArea'
 
 declare let $;
