@@ -122,7 +122,7 @@ export class MainLayout extends React.Component<Props, {}> {
                 </ul>
                 <ul className="contacts">
                   <li>
-                    <a className="" href="#nolink" title="Buy a coffee">
+                    <a className="" href="javascript:alert('공사중입니다')" title="Buy a coffee">
                       <span className="material-symbols-outlined">
                         local_cafe
                       </span>

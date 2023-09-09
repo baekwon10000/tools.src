@@ -188,7 +188,7 @@ class Beautify extends React.Component<ComponentProps,{}> {
 
   beautify = (event) => {
     let self = this;
-    // this.store_settings_to_cookie();
+    this.store_settings_to_cookie();
     utils.loadScript(this.HTML_BEAUTIFIER_URL, function() {
       let opts = {
         indent_size: '',
