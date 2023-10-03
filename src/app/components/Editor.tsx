@@ -16,6 +16,7 @@ interface EditorProps extends Props {
   beautify: React.MouseEventHandler<HTMLButtonElement>;
   minify: React.MouseEventHandler<HTMLButtonElement>;
   verify: React.MouseEventHandler<HTMLButtonElement>;
+  replace: React.MouseEventHandler<HTMLButtonElement>;
   options: Function;
 
 }
@@ -174,6 +175,11 @@ class Editor extends React.Component<EditorProps,{}> {
         <div className="row mb-3">
           <div className="col-md-12">
             {
+              this.props.replace ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.replace}>
+                <span>Replace</span>
+              </button> : null
+            }
+            {
               this.props.beautify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.beautify}>
                 <span>Beautify</span>
               </button> : null
@@ -214,6 +220,33 @@ class Editor extends React.Component<EditorProps,{}> {
           </div>
         </div>
         { this.props.options ? this.props.options() : null }
+        {
+          this.props.replace
+            ? <div className="row form">
+                <div className="find form-group col-md-12 mb-1">
+                  <label htmlFor="exampleInputEmail1" className="">Find</label>
+                  <div className="input-group">
+                    <input type="text" className="form-control" id="inputFind" aria-describedby="" placeholder=""/>
+                    <div className="input-group-append">
+                      <button title="Match Case" className="input-group-text material-symbols-outlined">match_case</button>
+                      <button title="Match Whole Word" className="input-group-text material-symbols-outlined">match_word</button>
+                      <button title="User Regular Expression" className="input-group-text material-symbols-outlined">regular_expression</button>
+                    </div>
+                  </div>
+                  <button title="in Selection" className="select btn material-symbols-outlined">select</button>
+                  {/* <div className="wrap">
+                    <input type="text" className="form-control col-md-4" id="inputFind" aria-describedby="" placeholder=""/>
+                    <button className="btn btn-secondary material-symbols-outlined">match_case</button>
+                  </div>
+                  <button className="btn btn-secondary material-symbols-outlined">select</button> */}
+                </div>
+                <div className="replace form-group col-md-12">
+                  <label htmlFor="exampleInputEmail1" className="">Replace</label>
+                  <input type="text" className="form-control" id="inputReplace" aria-describedby="" placeholder=""/>
+                </div>
+              </div>
+            : null
+        }
         <div className="row">
           <div className="col-md-6 mb-4">
             <div id="inputDiv" className="aceEditorBorder">
