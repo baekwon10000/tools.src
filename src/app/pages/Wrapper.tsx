@@ -10,6 +10,7 @@ import Replace from "../pages/Replace"
 import Url from "../pages/Url"
 import Unicode from "../pages/Unicode"
 import Color from "../pages/Color"
+import JavaMapStr from "./JavaMapStr"
 
 interface WrapperProps extends Props {}
 
@@ -43,8 +44,13 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     let action = first, type = second;
     let title, actor = ACTOR_NAME[action];
 
-    if(action === 'beautify' || action === 'minify' || action === 'verify' || action === 'convert') {
+    if(
+      action === 'beautify' || action === 'minify' || action === 'verify'
+      || (action === 'convert' && type === 'color')
+    ) {
       title = type.substring(0,1).toUpperCase()+type.substring(1) + ' ' + actor.substring(0,1).toUpperCase()+actor.substring(1);
+    } else if(action === 'convert' && type === 'javaMapStr') {
+      title = 'Java Map String to Key-Value pair';
     } else if(action === 'replace') {
       title = 'Html Tag Remover';
     } else if(action === 'encode' || action === 'decode') {
@@ -54,7 +60,7 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     // let inputEditorMode, outputEditorMode, beautify, minify, verify, options;
 
     let component;
-    if(action === 'encode' || action === 'decode' ) {
+    if(action === 'encode' || action === 'decode') {
       if(type === 'url')
         component = (<Url action={action} type={type}/>)
       else //if(type === 'unicode')
@@ -68,7 +74,10 @@ class Wrapper extends React.Component<WrapperProps,{}> {
     } else if(action === 'verify') {
       component = (<Json action={action} type={type}/>)
     } else if(action === 'convert') {
-      component = (<Color action={action} type={type}/>)
+      if(type === 'javaMapStr')
+        component = (<JavaMapStr action={action} type={type}/>)
+      else //if(type === 'color')
+        component = (<Color action={action} type={type}/>)
     } else
       component = (<Main/>)
     

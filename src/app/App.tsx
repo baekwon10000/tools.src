@@ -36,7 +36,7 @@ const Root = () => (
             'beautify/html', 'beautify/javascript', 'beautify/css',
             'minify/html',
             'verify/json',
-            'convert/color',
+            'convert/color', 'convert/javaMapStr',
             'replace/html',
             'encode/url', 'encode/unicode'
           ].map((path,index)=><Route path={path} component={Wrapper} key={index}/>)

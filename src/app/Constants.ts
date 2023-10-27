@@ -23,6 +23,7 @@ export const SAMPLE_DATA = {
     <b>This data is as of 21 Dec 2022.</b>
   </body>
 </html>`,
+  jsonStr: `{K1=V1, K2=V2, K3=V3, Kn=Vn}`,
   json: `{
   "employees": {
       "employee": [
@@ -100,6 +101,7 @@ export const MENUS = [
       title: 'Converter',
       menus: [
         {name: 'Color', link: '/convert/color'},
+        {name: 'Java Map String to Key-Value pair', link: '/convert/javaMapStr'},
       ]
   },
   {

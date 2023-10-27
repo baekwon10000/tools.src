@@ -9,7 +9,9 @@ interface EditorProps extends Props {
 
   type: string;
   inputEditorMode: string;
+  inputEditorHint?: string;
   outputEditorMode: string;
+  outputEditorHint?: string;
   setSampleData: React.MouseEventHandler<HTMLAnchorElement>;
   
   //
@@ -17,6 +19,7 @@ interface EditorProps extends Props {
   minify: React.MouseEventHandler<HTMLButtonElement>;
   verify: React.MouseEventHandler<HTMLButtonElement>;
   replace: React.MouseEventHandler<HTMLButtonElement>;
+  convert: React.MouseEventHandler<HTMLButtonElement>;
   options: Function;
 
 }
@@ -66,7 +69,7 @@ class Editor extends React.Component<EditorProps,{}> {
       {
         ...this.ace_common_options,
         mode: `ace/mode/${this.props.inputEditorMode}`,
-        placeholder: `Paste or type your data here...`,
+        placeholder: this.props.inputEditorHint ? this.props.inputEditorHint : `Paste or type your data here...`,
       }
     );
     let lang = ace.require("ace/lib/lang");
@@ -90,6 +93,7 @@ class Editor extends React.Component<EditorProps,{}> {
     let editor = this.outputACEEditor = ace.edit('outputACEEditor', {
       ...this.ace_common_options,
       mode: `ace/mode/${this.props.outputEditorMode}`,
+      placeholder: this.props.outputEditorHint ? this.props.outputEditorHint : ''
     });
     let lang = ace.require("ace/lib/lang");
     let statusUpdate = lang.delayedCall(function() {
@@ -175,11 +179,6 @@ class Editor extends React.Component<EditorProps,{}> {
         <div className="row mb-3">
           <div className="col-md-12">
             {
-              this.props.replace ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.replace}>
-                <span>Replace</span>
-              </button> : null
-            }
-            {
               this.props.beautify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.beautify}>
                 <span>Beautify</span>
               </button> : null
@@ -192,6 +191,16 @@ class Editor extends React.Component<EditorProps,{}> {
             { 
               this.props.verify ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.verify}>
                 <span>Verify</span>
+              </button> : null
+            }
+            {
+              this.props.replace ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.replace}>
+                <span>Replace</span>
+              </button> : null
+            }
+            {
+              this.props.convert ? <button className="btn btn-outline-secondary mr-1" onClick={this.props.convert}>
+                <span>Convert</span>
               </button> : null
             }
             { 
