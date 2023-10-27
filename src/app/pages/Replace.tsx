@@ -65,7 +65,7 @@ class Replace extends React.Component<ComponentProps, {}> {
     // let result = input.replace(new RegExp(find, 'g'), replace);
     // $('#outputArea').val(result);
     let result = inputEditor.getValue().replace(new RegExp(find, 'g'), replace);
-    let outputEditor = self.editor.getWrappedInstance().outputACEEditor;
+    let outputEditor = this.editor.getWrappedInstance().outputACEEditor;
     outputEditor.setValue(result, 1);
   }
 
