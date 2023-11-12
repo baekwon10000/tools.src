@@ -50,7 +50,7 @@ class JavaMapStr extends React.Component<ComponentProps,{}> {
           ref={ref => this.editor = ref}
           type={type}
           inputEditorMode={'text'}
-          inputEditorHint={'{K1=V1, K2=V2, ..., Kn=Vn}'}
+          inputEditorHint={'Java Map print string: items are spearated by comma and 1 space\nex) {K1=V1, K2=V2, ..., Kn=Vn}'}
           outputEditorMode={'text'}
           outputEditorHint={'Rows are separated by new lines\nKeys and values are separated by :'}
           convert={this.convert}
