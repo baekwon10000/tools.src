@@ -72,46 +72,6 @@ export class MainLayout extends React.Component<Props, {}> {
                     })
                   }
                   {/* <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beautifier</a>
-                    <div className="dropdown-menu" aria-labelledby="dropdown01">
-                      <a className="dropdown-item" href="/beautify/html">Html</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                    </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minifier</a>
-                    <div className="dropdown-menu" aria-labelledby="dropdown02">
-                      <a className="dropdown-item" href="/minify/html">Html</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                    </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Verifier</a>
-                    <div className="dropdown-menu" aria-labelledby="dropdown03">
-                      <a className="dropdown-item" href="/verify/json">Json</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                    </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Converter</a>
-                    <div className="dropdown-menu" aria-labelledby="dropdown04">
-                      <a className="dropdown-item" href="#nolink">-</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                    </div>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Encoder/Decoder</a>
-                    <div className="dropdown-menu" aria-labelledby="dropdown04">
-                      <a className="dropdown-item" href="/encode/unicode">Unicode</a>
-                      <a className="dropdown-item" href="/encode/url">Url</a>
-                      <a className="dropdown-item" href="#nolink">-</a>
-                    </div>
-                  </li>
-                  <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#nolink" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Etc</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown04">
                       <a className="dropdown-item" href="/replace/html">Html Tag Remover</a>

@@ -80,41 +80,41 @@ export const MENUS = [
   {
       title: 'Beautifier',
       menus: [
-          {name: 'Html', link: '/beautify/html'},
-          {name: 'Javascript', link: '/beautify/javascript'},
-          {name: 'Css', link: '/beautify/css'}
+          { name: 'Html', link: '/beautify/html' },
+          { name: 'Javascript', link: '/beautify/javascript' },
+          { name: 'Css', link: '/beautify/css' }
       ]
   },
   {
       title: 'Minifier',
       menus: [
-          {name: 'Html', link: '/minify/html'},
+          { name: 'Html', link: '/minify/html' },
       ]
   },
   {
       title: 'Verifier',
       menus: [
-          {name: 'Json', link: '/verify/json'},
+          { name: 'Json', link: '/verify/json' },
       ]
   },
   {
       title: 'Converter',
       menus: [
-        {name: 'Color', link: '/convert/color'},
-        {name: 'Java Map String to Key-Value pair', link: '/convert/javaMapStr'},
+        { name: 'Color', link: '/convert/color' },
+        { name: 'Java Map String to Key-Value pair', link: '/convert/javaMapStr' },
       ]
   },
   {
       title: 'Encoder/Decoder',
       menus: [
-          {name: 'Unicode', link: '/encode/unicode'},
-          {name: 'Url', link: '/encode/url'},
+          { name: 'Unicode', link: '/encode/unicode' },
+          { name: 'Url', link: '/encode/url' },
       ]
   },
   {
       title: 'Etc',
       menus: [
-          {name: 'Html Tag Remover', link: '/replace/html'},
+          { name: 'Html Tag Remover', link: '/replace/html' },
       ]
   },
 ]
