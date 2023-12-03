@@ -80,6 +80,7 @@ export const MENUS = [
   {
       title: 'Beautifier',
       menus: [
+          // { name: 이름, link: 링크, direction: 방향(one(default), both) }
           { name: 'Html', link: '/beautify/html' },
           { name: 'Javascript', link: '/beautify/javascript' },
           { name: 'Css', link: '/beautify/css' }
@@ -107,8 +108,8 @@ export const MENUS = [
   {
       title: 'Encoder/Decoder',
       menus: [
-          { name: 'Unicode', link: '/encode/unicode' },
-          { name: 'Url', link: '/encode/url' },
+          { name: 'Unicode', link: '/encode/unicode', direction: 'both' },
+          { name: 'Url', link: '/encode/url', direction: 'both' },
       ]
   },
   {
