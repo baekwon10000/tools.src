@@ -81,7 +81,8 @@ export class MainLayout extends React.Component<Props, {}> {
                       <a className="dropdown-item" href="#nolink">-</a>
                       <a className="dropdown-item" href="#nolink">-</a>
                     </div>
-                  </li> */}
+                  </li>
+                  ... */}
                 </ul>
                 <ul className="contacts">
                   <li>
@@ -139,51 +140,7 @@ export class MainLayout extends React.Component<Props, {}> {
                   <li><a className="text-muted" href="#nolink">-</a></li>
                 </ul>
               </div>
-              <div className="col-6 col-md">
-                <h5>Minifier</h5>
-                <ul className="list-unstyled text-small">
-                <li><a className="text-muted" href="/minify/html">Html</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                </ul>
-              </div>
-              <div className="col-6 col-md">
-                <h5>Verifier</h5>
-                <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/verify/json">Json</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                </ul>
-              </div>
-              <div className="col-6 col-md">
-                <h5>Converter</h5>
-                <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                </ul>
-              </div>
-              <div className="col-6 col-md">
-                <h5>Encoder/Decoder</h5>
-                <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/encode/unicode">Unicode</a></li>
-                  <li><a className="text-muted" href="/encode/url">Url</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                </ul>
-              </div>
-              <div className="col-6 col-md">
-                <h5>Etc</h5>
-                <ul className="list-unstyled text-small">
-                  <li><a className="text-muted" href="/replace">Html Tag Remover</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                  <li><a className="text-muted" href="#nolink">-</a></li>
-                </ul>
-              </div> */}
+              ... */}
             </div>
           </footer>
           <footer>
