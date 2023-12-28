@@ -1,11 +1,12 @@
-export const ACTOR_NAME = {
-  'beautify': 'beatuifier',
-  'minify': 'minifier',
-  'verify': 'verifier',
-  'encode': 'encoder',
-  'decode': 'decoder',
-  'convert': 'converter',
-}
+import Beautify from "./pages/Beautify"
+import Minify from "./pages/Minify"
+import Json from "./pages/Json"
+import Replace from "./pages/Replace"
+import Url from "./pages/Url"
+import Unicode from "./pages/Unicode"
+import Color from "./pages/Color"
+import JavaMapStr from "./pages/JavaMapStr"
+import ByteLength from "./pages/ByteLength"
 
 export const SAMPLE_DATA = {
   html: `<!DOCTYPE html>
@@ -81,41 +82,41 @@ export const MENUS = [
       title: 'Beautifier',
       menus: [
           // { name: 이름, link: 링크, direction: 방향(one(default), both) }
-          { name: 'Html', link: '/beautify/html' },
-          { name: 'Javascript', link: '/beautify/javascript' },
-          { name: 'Css', link: '/beautify/css' }
+          { name: 'Html', link: '/beautify/html', title: 'Html Beautifier', component: Beautify },
+          { name: 'Javascript', link: '/beautify/javascript', title: 'Javascript Beautifier', component: Beautify },
+          { name: 'Css', link: '/beautify/css', title: 'Css Beautifier', component: Beautify }
       ]
   },
   {
       title: 'Minifier',
       menus: [
-          { name: 'Html', link: '/minify/html' },
+          { name: 'Html', link: '/minify/html', title: 'Html Minifier', component: Minify },
       ]
   },
   {
       title: 'Verifier',
       menus: [
-          { name: 'Json', link: '/verify/json' },
+          { name: 'Json', link: '/verify/json', title: 'Json Verifier', component: Json },
       ]
   },
   {
       title: 'Converter',
       menus: [
-        { name: 'Color', link: '/convert/color' },
-        { name: 'Java Map String to Key-Value pair', link: '/convert/javaMapStr' },
+        { name: 'Color', link: '/convert/color', title: 'Color Converter', component: Color },
+        { name: 'Java Map String to Key-Value pair', link: '/convert/javaMapStr', title: 'Java Map String to Key-Value pair', component: JavaMapStr },
       ]
   },
   {
       title: 'Encoder/Decoder',
       menus: [
-          { name: 'Unicode', link: '/encode/unicode', direction: 'both' },
-          { name: 'Url', link: '/encode/url', direction: 'both' },
+          { name: 'Unicode', link: '/encode/unicode', title: 'Unicode Encoder/Decoder', component: Unicode, direction: 'both' },
+          { name: 'Url', link: '/encode/url', title: 'Url Encoder/Decoder', component: Url, direction: 'both' },
       ]
   },
   {
       title: 'Etc',
       menus: [
-          { name: 'Html Tag Remover', link: '/replace/html' },
+          { name: 'Html Tag Remover', link: '/replace/html', title: 'Html Tag Remover', component: Replace },
       ]
   },
 ]

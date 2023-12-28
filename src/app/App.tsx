@@ -7,15 +7,21 @@ import {createHashHistory} from "history";
 
 import MainLayout from "./components/Layout"
 import NotFoundPage from "./pages/404"
-import Main from "./pages/Main"
-import Html from "./pages/Html"
-import Js from "./pages/Js"
-import Json from "./pages/Json"
 import Wrapper from "./pages/Wrapper"
+import {MENUS} from "./Constants"
 
 const globals = require("./config/" + process.env.NODE_ENV + "/globals");
 const store = configureStore();
 const history = useRouterHistory(createHashHistory)({queryKey: false});
+const URLs = function() {
+  let result = [];
+  for(let i = 0; i < MENUS.length; i++) {
+    for(let j = 0; j < MENUS[i].menus.length; j++) {
+      result.push(MENUS[i].menus[j].link);
+    }
+  }
+  return result;
+}();
 
 window.onload = function() {}
 window.onerror = function(messageOrEvent, source, lineNo, columnNo, error) {}
@@ -32,14 +38,14 @@ const Root = () => (
     >
       <Route path="/" component={MainLayout}>
         {
-          [
+          /* [
             'beautify/html', 'beautify/javascript', 'beautify/css',
             'minify/html',
             'verify/json',
             'convert/color', 'convert/javaMapStr',
             'replace/html',
             'encode/url', 'encode/unicode'
-          ].map((path,index)=><Route path={path} component={Wrapper} key={index}/>)
+          ] */URLs.map((path,index) => <Route path={path} component={Wrapper} key={index}/>)
         }
         {/* <Route path="main" component={Main}/>
         {['html','html/beautify','html/minify'].map((path,index)=><Route path={path} component={Html} key={index}/>)}
