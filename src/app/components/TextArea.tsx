@@ -40,20 +40,24 @@ class TextArea extends React.Component<TextAreaProps,{}> {
   componentDidMount() {
     let self = this;
     this.$inputArea = $('#inputArea');
-    this.$inputArea.on('keyup', (e) => {
-      if(this.props.onInputAreaKeyUp)
+    if(this.props.onInputAreaKeyUp) {
+      this.$inputArea.on('keyup', (e) => {
         this.props.onInputAreaKeyUp(e);
-      this.updateInputAreaStatusBar();
-    });
+        this.updateInputAreaStatusBar();
+      });
+    } else
+      this.$inputArea.prop('readonly', true);
     this.$inputArea.on('mouseup updateStatusBar', (e) => {
       this.updateInputAreaStatusBar();
     });
     this.$outputArea = $('#outputArea');
-    this.$outputArea.on('keyup', (e) => {
-      if(this.props.onOutputAreaKeyUp)
+    if(this.props.onOutputAreaKeyUp) {
+      this.$outputArea.on('keyup', (e) => {
         this.props.onOutputAreaKeyUp(e);
-      this.updateOutputAreaStatusBar();
-    });
+        this.updateOutputAreaStatusBar();
+      });
+    } else
+      this.$outputArea.prop('readonly', true);
     this.$outputArea.on('mouseup updateStatusBar', (e) => {
       this.updateOutputAreaStatusBar();
     });
@@ -168,11 +172,18 @@ class TextArea extends React.Component<TextAreaProps,{}> {
                 <span>Decode</span>
               </button> : null
             }
+            { 
+              this.props.options ? <button className="btn btn-outline-secondary mr-1" onClick={this.options}>
+                <span>Options</span>
+              </button> : null
+            }
             <button className="btn btn-outline-secondary" onClick={this.cleanAll}>
               <span>Clear</span>
             </button>
           </div>
         </div>
+        { this.props.options ? this.props.options() : null }
+        { this.props.descriptions ? this.props.descriptions() : null }
         {
           this.props.replace
             ? <div className="row form">
@@ -200,7 +211,6 @@ class TextArea extends React.Component<TextAreaProps,{}> {
               </div>
             : null
         }
-        { this.props.options ? this.props.options() : null }
         <div className="row">
           <div className="col-md-6 mb-4">
             <div id="inputDiv" className="editorBorder">

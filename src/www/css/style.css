@@ -23,7 +23,9 @@ label {margin-bottom:0;}
 /* App */
 header .navbar-brand {padding:0;height:32px;}
 header .navbar-brand span {font-size:32px;}
-header .dropdown-menu .material-symbols-outlined {font-size:12px;margin-right:5px;}
+header .dropdown-menu {position:relative;}
+header .dropdown-menu .material-symbols-outlined,
+header .dropdown-menu .marker {font-size:12px;margin-right:5px;}
 header ul.contacts {position:absolute;right:16px;top:8px;line-height:40px;}
 header ul.contacts li {float:left;}
 header ul.contacts li {line-height:40px;text-align:center;width:40px;height:40px;margin:0 2px;border-radius:50%;border:1px solid #d9d9d9;}
@@ -205,3 +207,6 @@ footer p {margin-bottom:0;}
   .replace .form .find .input-group {width:calc(100% - 50px - 5px);}
   .replace .form .replace input {width:100%;}
 }
+
+/* Byte Length Measurer Options */
+.byte-length #descriptions input {margin:3px 8px 3px 4px;padding-left:5px;}

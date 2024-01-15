@@ -75,6 +75,7 @@ display: inline;
 .menu_simple ul li a:hover, .menu_simple ul li .current {color: white;background-color: #5FD367;}`,
   unicode: `ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ`,
   url: `https://github.com/baekwon10000/tools.src`,
+  bytelength: `ㄱㄴㄷㄹㅁ 123 abc`,
 }
 
 export const MENUS = [
@@ -117,6 +118,7 @@ export const MENUS = [
       title: 'Etc',
       menus: [
           { name: 'Html Tag Remover', link: '/replace/html', title: 'Html Tag Remover', component: Replace },
+          { name: 'Measure Byte Length', link: '/measure/byte-length', title: 'Byte Length Measurer', component: ByteLength, attr: 'readonly' },
       ]
   },
 ]

@@ -63,6 +63,7 @@ export class MainLayout extends React.Component<Props, {}> {
                               item.menus.map((item, index) => {
                                 return (
                                   <a key={index} className="dropdown-item" href={item.link}>
+                                    { item.attr == 'readonly' ? <span className="marker upper">R</span> : '' }
                                     { item.direction === 'both' ? <span className="material-symbols-outlined">sync_alt</span> : '' }
                                     {item.name}
                                   </a>
