@@ -18,7 +18,8 @@ interface TextAreaProps extends Props {
   replace: React.MouseEventHandler<HTMLButtonElement>;
   encode: React.MouseEventHandler<HTMLButtonElement>;
   decode: React.MouseEventHandler<HTMLButtonElement>;
-  options: Function;
+  options: () => React.JSX.Element;
+  descriptions: () => React.JSX.Element;
   onInputAreaKeyUp: React.MouseEventHandler<HTMLButtonElement>;
   onOutputAreaKeyUp: React.MouseEventHandler<HTMLButtonElement>;
 }

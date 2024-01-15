@@ -47,10 +47,6 @@ const Root = () => (
             'encode/url', 'encode/unicode'
           ] */URLs.map((path,index) => <Route path={path} component={Wrapper} key={index}/>)
         }
-        {/* <Route path="main" component={Main}/>
-        {['html','html/beautify','html/minify'].map((path,index)=><Route path={path} component={Html} key={index}/>)}
-        {['json','json/verify'].map((path,index)=><Route path={path} component={Json} key={index}/>)}
-        <Route path="js" component={Js}/> */}
       </Route>
       <Route path="*" component={NotFoundPage}/>
     </Router>

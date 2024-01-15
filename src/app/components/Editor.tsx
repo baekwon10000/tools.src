@@ -20,7 +20,7 @@ interface EditorProps extends Props {
   verify: React.MouseEventHandler<HTMLButtonElement>;
   replace: React.MouseEventHandler<HTMLButtonElement>;
   convert: React.MouseEventHandler<HTMLButtonElement>;
-  options: Function;
+  options: () => React.JSX.Element;
 
 }
 

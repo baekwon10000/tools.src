@@ -64,10 +64,6 @@ class Unicode extends React.Component<ComponentProps,{}> {
           type={type}
           action={action}
           setSampleData={this.setSampleData}
-          // action={this.action}
-          // encode={this.encode}
-          // decode={this.decode}
-          // options={this.options}
           onInputAreaKeyUp={this.onInputAreaKeyUp}
           onOutputAreaKeyUp={this.onOutputAreaKeyUp}
         />
