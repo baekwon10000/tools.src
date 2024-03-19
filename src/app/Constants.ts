@@ -104,7 +104,10 @@ export const MENUS = [
       title: 'Converter',
       menus: [
         { name: 'Color', link: '/convert/color', title: 'Color Converter', component: Color },
-        { name: 'Java Map String to Key-Value pair', link: '/convert/javaMapStr', title: 'Java Map String to Key-Value pair', component: JavaMapStr },
+        { 
+          name: 'Java Map String to Key-Value pair',
+          // name: '매우매우긴메뉴명이들어가면어떻게될까요 매우매우긴메뉴명이들어가면어떻게될까요 매우매우긴메뉴명이들어가면어떻게될까요 매우매우긴메뉴명이들어가면어떻게될까요',
+          link: '/convert/javaMapStr', title: 'Java Map String to Key-Value pair', component: JavaMapStr },
       ]
   },
   {

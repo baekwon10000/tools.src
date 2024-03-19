@@ -150,6 +150,13 @@ a.copytext.active:after {
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
 footer .wrap {max-width:1024px;margin:0 auto;}
 footer p {margin-bottom:0;}
+footer ul li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* max-width:200px; */
+}
+footer ul li a {}
 
 ._404 {margin:0 auto;height:100%;max-width:800px;}
 ._404 section {padding:48px 8px;text-align:center;}
