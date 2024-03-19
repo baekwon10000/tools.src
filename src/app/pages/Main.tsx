@@ -26,7 +26,7 @@ class Main extends React.Component<Props, {}> {
               나도 광고 좀 붙여서 용돈 벌이 좀 하고 싶었는데 가망이 안보여서 그만둠.<br/>
               My own tool site that I create and use.<br/>
               Advertising sites played a role in creating this.<br/>
-              I also wanted to earn some pocket money by putting up some ads, but I didn't see any hope so I quit.
+              I also want to earn some pocket money by putting up some ads, but didn't see any hope so I quit.
             </p>
           </div>
         </div>
