@@ -113,15 +113,15 @@ export const MENUS = [
   {
       title: 'Encoder/Decoder',
       menus: [
-          { name: 'Unicode', link: '/encode/unicode', title: 'Unicode Encoder/Decoder', component: Unicode, direction: 'both' },
-          { name: 'Url', link: '/encode/url', title: 'Url Encoder/Decoder', component: Url, direction: 'both' },
+          { name: 'Unicode', link: '/bicoder/unicode', title: 'Unicode Encoder/Decoder', component: Unicode, direction: 'both' },
+          { name: 'Url', link: '/bicoder/url', title: 'Url Encoder/Decoder', component: Url, direction: 'both' },
       ]
   },
   {
       title: 'Etc',
       menus: [
-          { name: 'Html Tag Remover', link: '/replace/html', title: 'Html Tag Remover', component: Replace },
-          { name: 'Measure Byte Length', link: '/measure/byte-length', title: 'Byte Length Measurer', component: ByteLength, attr: 'readonly' },
+          { name: 'Html Tag Remover', link: '/etc/html', title: 'Html Tag Remover', component: Replace },
+          { name: 'Measure Byte Length', link: '/etc/measure', title: 'Byte Length Measurer', component: ByteLength, attr: 'readonly' },
       ]
   },
 ]
