@@ -350,5 +350,7 @@ class Editor extends React.Component<EditorProps,{}> {
 
 // Editors.propTypes = {};
 // Editors.defaultProps = {};
+const mapStateToProps = (state: any) => { return {}; };
+const mapDispatchToProps = (dispatch: any) => { return {}; };
 
-export default connect(null, null, null, {withRef:true})(Editor);
+export default connect(mapStateToProps, mapDispatchToProps, null, {withRef:true})(Editor);

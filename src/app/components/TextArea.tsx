@@ -291,5 +291,7 @@ class TextArea extends React.Component<TextAreaProps,{}> {
 
 // TextArea.propTypes = {};
 // TextArea.defaultProps = {};
+const mapStateToProps = (state: any) => { return {}; };
+const mapDispatchToProps = (dispatch: any) => { return {}; };
 
-export default connect(null, null, null, {withRef:true})(TextArea);
+export default connect(mapStateToProps, mapDispatchToProps, null, {withRef:true})(TextArea);
