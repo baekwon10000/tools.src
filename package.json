@@ -57,10 +57,5 @@
     "react-router-redux": "4.0.5",
     "redux": "3.5.2",
     "redux-saga": "0.16.0"
-  },
-  "resolutions": {
-    "@types/react": "15",
-    "@types/react-dom": "15",
-    "@types/react-redux": "4"
   }
 }
