@@ -100,13 +100,13 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-      someVal: state.sample.someVal,
+    someVal: state.sample.someVal,
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-      onSetSomeVal: (value) => dispatch(setSomeVal(value)),
+    onSetSomeVal: (value) => dispatch(setSomeVal(value)),
   }
 };
 
