@@ -69,6 +69,34 @@ class Replace extends React.Component<ComponentProps, {}> {
     outputEditor.setValue(result, 1);
   }
 
+  panel(): React.JSX.Element {
+    return (
+      <div className="row form">
+        <div className="find form-group col-md-12 mb-1">
+          <label htmlFor="inputFind" className="">Find</label>
+          <div className="input-group">
+            <input type="text" className="form-control" id="inputFind" aria-describedby="" placeholder=""/>
+            <div className="input-group-append">
+              <button title="Match Case" className="input-group-text material-symbols-outlined">match_case</button>
+              <button title="Match Whole Word" className="input-group-text material-symbols-outlined">match_word</button>
+              <button title="User Regular Expression" className="input-group-text material-symbols-outlined">regular_expression</button>
+            </div>
+          </div>
+          <button title="in Selection" className="select btn material-symbols-outlined">select</button>
+          {/* <div className="wrap">
+            <input type="text" className="form-control col-md-4" id="inputFind" aria-describedby="" placeholder=""/>
+            <button className="btn btn-secondary material-symbols-outlined">match_case</button>
+          </div>
+          <button className="btn btn-secondary material-symbols-outlined">select</button> */}
+        </div>
+        <div className="replace form-group col-md-12">
+          <label htmlFor="inputReplace" className="">Replace</label>
+          <input type="text" className="form-control" id="inputReplace" aria-describedby="" placeholder=""/>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     // console.log('this.props = ', this.props);
     const {type, action} = this.props; 
@@ -88,6 +116,7 @@ class Replace extends React.Component<ComponentProps, {}> {
           outputEditorMode={'text'}
           replace={this.replace}
           setSampleData={this.setSampleData}
+          panel={this.panel}
         />
       </div>
     )
